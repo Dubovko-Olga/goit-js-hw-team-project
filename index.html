@@ -8,14 +8,160 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css">
     <script type="module" crossorigin src="/goit-js-hw-team-project/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-team-project/assets/index-DLcZTd3L.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-team-project/assets/vendor-D8yHpJ_F.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-team-project/assets/vendor-DiukFYMA.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-team-project/assets/index-j_jgZNsF.css">
   </head>
   <body>
     
 
     <main>
       <!-- Loads the specified .html file -->
-      
+      <section class="hero-section">
+  <div class="container"></div>
+  <div class="hero-content">
+    <div class="hero-prop">
+      <h2 class="hero-discount">Get 10% off<br />your first order</h2>
+      <a href="#books" class="shop-btn">Shop Now!</a>
+    </div>
+    <div class="hero-image">
+      <div class="hero-image">
+        <picture>
+          <!-- Мобільна версія -->
+          <source
+            media="(max-width: 767px)"
+            srcset="../img/hero-mob-1x.jpg 1x, ../img/hero-mob-2x.jpg 2x"
+          />
+
+          <!-- Планшетна версія -->
+          <source
+            media="(min-width: 768px) and (max-width: 1439px)"
+            srcset="../img/hero-tabl-1x.jpg 1x, ../img/hero-tabl-2x.jpg 2x"
+          />
+
+          <!-- Десктопна версія -->
+          <source
+            media="(min-width: 1440px)"
+            srcset="/goit-js-hw-team-project/assets/hero-desk-1x-BRj8b_As.jpg 1x, /goit-js-hw-team-project/assets/hero-desk-2x-Bk2ZhTOF.jpg 2x"
+          />
+
+          <!-- Фолбек для браузерів без підтримки <picture> -->
+          <img src="../img/hero-desk-1x.jpg" alt="Book and coffee" />
+        </picture>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="hero-title">Discover Your Next Great Read Today!</h1>
+
+  <!-- Слайдер -->
+
+  <div class="swiper-container">
+    <ul class="swiper-wrapper">
+      <li class="swiper-slide">
+        <picture>
+          <!-- Мобільна версія -->
+          <source
+            media="(max-width: 768px)"
+            srcset="../img/slide-deck-2-1x.jpg 1x, ../img/slide-deck-2-2x.jpg 2x"
+          />
+
+          <!-- Планшетна версія -->
+          <source
+            media="(min-width: 768px) and (max-width: 1440px)"
+            srcset="../img/slide-tabl-2-1x.jpg 1x, ../img/slide-tabl-2-2x.jpg 2x"
+          />
+
+          <!-- Десктопна версія -->
+          <source
+            media="(min-width: 1440px)"
+            srcset="../img/hero-desk-1x.jpg 1x, ../img/hero-desk-2x.jpg 2x"
+          />
+
+          <!-- Фолбек для браузерів без підтримки <picture> -->
+          <img src="../img/slide-desk-2-1x.jpg" alt="Book and coffee" />
+        </picture>
+      </li>
+      <li class="swiper-slide">
+        <picture>
+          <!-- Мобільна версія -->
+          <source
+            media="(max-width: 768px)"
+            srcset="../img/slide-mob-3-1x.jpg 1x, ../img/slide-mob-3-2x.jpg 2x"
+          />
+
+          <!-- Планшетна версія -->
+          <source
+            media="(min-width: 768px) and (max-width: 1440px)"
+            srcset="../img/slide-tabl-3-1x.jpg 1x, ../img/slide-tabl-3-2x.jpg 2x"
+          />
+
+          <!-- Десктопна версія -->
+          <source
+            media="(min-width: 1440px)"
+            srcset="../img/slide-desk-3-1x.jpg 1x, ../img/slide-desk-3-2x.jpg 2x"
+          />
+
+          <!-- Фолбек для браузерів без підтримки <picture> -->
+          <img src="../img/slide-desk-3-1x.jpg" alt="Book and coffee" />
+        </picture>
+      </li>
+      <li class="swiper-slide">
+        <picture>
+          <!-- Мобільна версія -->
+          <source
+            media="(max-width: 768px)"
+            srcset="../img/slide-mob-4-1x.jpg 1x, ../img/slide-mob-4-2x.jpg 2x"
+          />
+
+          <!-- Планшетна версія -->
+          <source
+            media="(min-width: 768px) and (max-width: 1440px)"
+            srcset="../img/slide-tabl-4-1x.jpg 1x, ../img/slide-tabl-4-2x.jpg 2x"
+          />
+
+          <!-- Десктопна версія -->
+          <source
+            media="(min-width: 1440px)"
+            srcset="../img/slide-desk-4-1x.jpg 1x, ../img/slide-desk-4-2x.jpg 2x"
+          />
+
+          <!-- Фолбек для браузерів без підтримки <picture> -->
+          <img src="../img/slide-desk-4-1x.jpg" alt="Book and coffee" />
+        </picture>
+      </li>
+    </ul>
+
+    <div class="swiper-navigation">
+      <!-- Кнопка "Назад"  -->
+      <button
+        type="button"
+        class="slider-btn slider-btn--left"
+        aria-label="Previous slide"
+      >
+        <svg class="hero-icon" width="24" height="24">
+          <use href="../img/sprite.svg#icon-arrow-left"></use>
+        </svg>
+      </button>
+
+      <!-- Кнопка "Вперед"  -->
+      <button
+        type="button"
+        class="slider-btn slider-btn--right"
+        aria-label="Next slide"
+      >
+        <svg class="hero-icon" width="24" height="24">
+          <use href="../img/sprite.svg  #icon-arrow-right"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+
+
+
+</section>
+
 
 
 
@@ -25,6 +171,7 @@
 
 
     </main>
+    
     
   </body>
 </html>
