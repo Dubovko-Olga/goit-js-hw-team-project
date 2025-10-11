@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    background: var(--Color-Scheme-1-Text, #0B0500);
+}
+
+.location {
+    background: var(--Color-Scheme-1-Background, #FCEEE6);
+    /* світло-пісочний фон */
+    padding: 64px 16px;
+}
+
+.location__label {
+    font-family: Rubik;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    text-transform: capitalize;
+    padding-bottom: 16px;
+}
+
+.location__title {
+  font-family: Rubik;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 48px;
+    line-height: 120%;
+    padding-bottom: 24px;
+}
+
+.location__text {
+    font-family: Rubik;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    padding-bottom: 20px;
+}
+.location__header{
+    margin-bottom: 32px;
+}
+
+.location__list {
+    list-style-type: none;
+}
+
+.location__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.location__icon {
+    margin-right: 10px;
+    color: #0B0500;
+    fill: currentColor;
+    
+}
+
+.location__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.location__subtitle {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.location__link {
+    font-size: 14px;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.location__map iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+/* Для планшетних екранів (768px+) */
+@media (min-width: 768px) {
+    .location {
+        padding: 30px;
+    }
+
+    .location__title {
+        font-size: 28px;
+    }
+
+    .location__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .location__item {
+        display: flex;
+        align-items: center;
+    }
+
+    .location__map iframe {
+        height: 300px;
+    }
+}
+
+/* Для десктопних екранів (1440px+) */
+@media (min-width: 1440px) {
+    .location {
+        padding: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .location__title {
+        font-size: 36px;
+    }
+
+    .location__list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .location__map iframe {
+        height: 400px;
+    }
+}
