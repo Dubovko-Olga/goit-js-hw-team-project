@@ -1,35 +1,50 @@
-const slider = document.querySelector('.slider');
-const slides = document.querySelectorAll('.slide');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
+// hero/js/hero.js
 
-let currentIndex = 0;
+export function initHeroSlider() {
+  const swiperWrapper = document.querySelector('.swiper-wrapper');
+  const slides = document.querySelectorAll('.swiper-slide');
+  const prevBtn = document.querySelector('.hero-btn-left');
+  const nextBtn = document.querySelector('.hero-btn-right');
 
-function updateSlider() {
-  const slideWidth = slides[0].offsetWidth;
-  slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  if (!swiperWrapper || slides.length === 0 || !prevBtn || !nextBtn) {
+    console.warn('Hero slider: не знайдено потрібні елементи.');
+    return;
+  }
 
-  // Disable prev button at start
-  prevBtn.disabled = currentIndex === 0;
+  let currentSlide = 0;
+  const totalSlides = slides.length;
 
-  // Disable next button at end
-  nextBtn.disabled = currentIndex === slides.length - 1;
+  const getSlideWidth = () => slides[0].offsetWidth;
+
+  function updateButtons() {
+    prevBtn.classList.toggle('disabled', currentSlide === 0);
+    nextBtn.classList.toggle('disabled', currentSlide === totalSlides - 1);
+  }
+
+  function moveSlider() {
+    const slideWidth = getSlideWidth();
+    swiperWrapper.style.transform = `translateX(-${
+      slideWidth * currentSlide
+    }px)`;
+    updateButtons();
+  }
+
+  prevBtn.addEventListener('click', () => {
+    if (currentSlide > 0) {
+      currentSlide--;
+      moveSlider();
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (currentSlide < totalSlides - 1) {
+      currentSlide++;
+      moveSlider();
+    }
+  });
+
+  window.addEventListener('resize', moveSlider);
+
+  // Запуск слайдера
+  moveSlider();
 }
-
-prevBtn.addEventListener('click', () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    updateSlider();
-  }
-});
-
-nextBtn.addEventListener('click', () => {
-  if (currentIndex < slides.length - 1) {
-    currentIndex++;
-    updateSlider();
-  }
-});
-
-window.addEventListener('resize', updateSlider);
-
-updateSlider();
