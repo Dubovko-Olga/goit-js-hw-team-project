@@ -231,7 +231,7 @@ body,
 }
 
 @media (min-width: 1440px) {
-  .container {
+  .books-container {
     display: grid;
     grid-template-columns: 308px 1fr;
     gap: 24px;
