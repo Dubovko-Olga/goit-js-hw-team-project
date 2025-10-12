@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroSlider();
 });
 import './js/hero.js';
-
-import './js/header.js';
-import './js/books/books.js';
+import './js/modal.js';
+import './js/books.js';
 
