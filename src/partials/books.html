@@ -1,0 +1,35 @@
+<section class="books" id="books">
+  <div class="container">
+    <h2 class="visually-hidden">Trending books</h2>
+
+    <!-- Левая часть: Books + Counter + Categories -->
+    <div class="left-panel">
+      <div class="header-row">
+        <p class="subname">Books</p>
+        <p class="counter"></p>
+      </div>
+
+      <!-- ===== КАТЕГОРИИ ===== -->
+      <div class="categories">
+        <!-- Обёртка для селекта (мобилка) -->
+        <div class="select-wrapper">
+          <select class="category-select" id="categories-select"></select>
+          <svg class="select-icon" width="12" height="12">
+            <use href="../img/icons.svg#icon-downCategoryFilters"></use>
+          </svg>
+        </div>
+
+        <!-- Список категорий (десктоп) -->
+        <ul class="categories-list"></ul>
+      </div>
+    </div>
+
+    <!-- Правая часть: Галерея -->
+    <div class="gallery-wrapper">
+      <ul class="gallery"></ul>
+      <button class="load-more">Show More</button>
+    </div>
+
+    <span class="loader"></span>
+  </div>
+</section>
