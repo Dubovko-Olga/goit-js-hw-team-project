@@ -1,4 +1,4 @@
-// hero/js/hero.js
+
 
 export function initHeroSlider() {
   const swiperWrapper = document.querySelector('.swiper-wrapper');
@@ -48,3 +48,4 @@ export function initHeroSlider() {
   // Запуск слайдера
   moveSlider();
 }
+
