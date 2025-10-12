@@ -6,4 +6,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 import './js/hero.js';
 import './js/modal.js';
+
 import './js/books.js';
