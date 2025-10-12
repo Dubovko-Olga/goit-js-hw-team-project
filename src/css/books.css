@@ -98,7 +98,6 @@ body,
   grid-template-columns: 1fr;
 }
 
-/* --- Card style --- */
 .gallery-item {
   display: flex;
   flex-direction: column;
@@ -170,20 +169,18 @@ body,
 
 .left-panel {
   display: flex;
-  flex-direction: column; /* Сначала row, потом категории */
-  gap: 24px; /* расстояние между row и категориями */
+  flex-direction: column;
+  gap: 24px;
   margin-bottom: 24px;
 }
 
 .header-row {
   display: flex;
-  justify-content: space-between; /* Books слева, Counter справа */
+  justify-content: space-between;
   width: 100%;
   align-items: center;
   margin-top: 32px;
 }
-
-/* Список категорий под row по центру */
 
 .subname {
   font-family: 'Rubik', sans-serif;
@@ -236,22 +233,22 @@ body,
 @media (min-width: 1440px) {
   .container {
     display: grid;
-    grid-template-columns: 308px 1fr; /* Left-panel слева, Галерея справа */
+    grid-template-columns: 308px 1fr;
     gap: 24px;
   }
 
   .content-wrapper {
-    display: contents; /* чтобы контейнер контента не мешал сетке */
+    display: contents;
   }
 
   .left-panel {
     display: flex;
-    flex-direction: column; /* вертикально: header-row + категории */
+    flex-direction: column;
     gap: 24px;
   }
 
   .header-row {
-    justify-content: space-between; /* Books слева, Counter справа */
+    justify-content: space-between;
     margin-top: 0;
   }
 
@@ -281,7 +278,7 @@ body,
   .gallery-item {
     display: flex;
     flex-direction: column;
-    max-width: 100%; /* занимает всю ширину колонки */
+    max-width: 100%;
   }
   .gallery-item img {
     height: 322px;
