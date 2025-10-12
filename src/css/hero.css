@@ -2,6 +2,8 @@
   .hero.container {
     padding-bottom: 32px;
   }
+
+
   .book1 {
     background-image: url(../img/hero-tabl-1x.jpg);
   }
@@ -94,10 +96,9 @@
     line-height: 1.5;
     color: #fff;
   }
-    .hero-deck {
+  .hero-deck {
     display: flex;
-    flex-direction: column; 
-  
+    flex-direction: column;
   }
   .swiper-navigation {
     display: flex;
@@ -107,7 +108,6 @@
     align-items: flex-end;
     justify-content: flex-end;
     right: 0;
-
   }
   .hero-title {
     font-weight: bold;
@@ -143,6 +143,7 @@
   }
 }
 @media only screen and (min-width: 768px) {
+  
   .swiper-slide {
     padding-left: 40px;
     padding-bottom: 32px;
@@ -159,10 +160,10 @@
     width: 164px;
     font-size: 16px;
   }
-    .hero-deck {
+  .hero-deck {
     display: flex;
     flex-direction: row;
-    }
+  }
   .swiper-navigation {
     display: flex;
     position: static;
@@ -170,12 +171,17 @@
     order: 0;
     justify-content: flex-end;
   }
- 
+
   .hero-title {
     width: 560px;
   }
 }
 @media only screen and (min-width: 1440px) {
+    .hero-section {
+    border: 1px solid #000;
+    padding-bottom: 32px;
+  }
+
   .swiper-slide {
     padding-left: 56px;
     padding-bottom: 56px;
@@ -198,5 +204,4 @@
     margin-top: 24px;
     width: 1168px;
   }
-  
 }
