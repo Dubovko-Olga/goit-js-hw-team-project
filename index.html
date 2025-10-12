@@ -5,10 +5,17 @@
     <link rel="icon" type="image/svg+xml" href="/goit-js-hw-team-project/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+    />
     <script type="module" crossorigin src="/goit-js-hw-team-project/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-team-project/assets/index-DNYq971E.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-team-project/assets/vendor-CWxt7QI6.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-team-project/assets/index-bJLYbDMs.css">
   </head>
   <body>
     
@@ -17,16 +24,46 @@
       <!-- Loads the specified .html file -->
       
 
+      <section class="books" id="books">
+  <div class="container">
+    <h2 class="visually-hidden">Trending books</h2>
 
+    <div class="left-panel">
+      <div class="header-row">
+        <p class="subname">Books</p>
+        <p class="counter"></p>
+      </div>
 
+      <div class="categories">
+        <div class="select-wrapper">
+          <select class="category-select" id="categories-select"></select>
+          <svg class="select-icon" width="12" height="12">
+            <use href="../img/icons.svg#icon-downCategoryFilters"></use>
+          </svg>
+        </div>
 
+        <ul class="categories-list"></ul>
+      </div>
+    </div>
 
+    <div class="gallery-wrapper">
+      <ul class="gallery"></ul>
+      <button class="load-more">Show More</button>
+    </div>
 
+    <span class="loader"></span>
+  </div>
+</section>
 
-
-
+      
+      
+      
+      
+      
+      
+      
     </main>
     
-    
+
   </body>
 </html>
