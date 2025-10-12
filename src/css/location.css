@@ -151,7 +151,7 @@
     .location__container {
         max-width: 1312px;
         margin: 0 auto;
-        padding: 100px 64px;
+        padding: 64px 64px 106px 64px;
         gap: 80px;
     }
 
