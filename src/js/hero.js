@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const swiperWrapper = document.querySelector('.hero-swiper-wrapper');
   const slides = document.querySelectorAll('.hero-swiper-slide');
   const prevBtn = document.querySelector('.hero-btn-left');
@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let currentSlide = 0;
 
-  function updateButtons() {
+  const updateButtons = () => {
     if (currentSlide === 0) {
       prevBtn.classList.add('disabled');
       prevBtn.setAttribute('aria-disabled', 'true');
@@ -22,31 +22,33 @@ document.addEventListener('DOMContentLoaded', function () {
       nextBtn.classList.remove('disabled');
       nextBtn.removeAttribute('aria-disabled');
     }
-  }
+  };
 
-  function moveSlider() {
+  const moveSlider = () => {
     const slideWidth = slides[0].offsetWidth;
     swiperWrapper.style.transform = `translateX(-${
       slideWidth * currentSlide
     }px)`;
     updateButtons();
-  }
+  };
 
-  prevBtn.addEventListener('click', function () {
+  prevBtn.addEventListener('click', () => {
     if (currentSlide > 0) {
       currentSlide--;
       moveSlider();
     }
   });
 
-  nextBtn.addEventListener('click', function () {
+  nextBtn.addEventListener('click', () => {
     if (currentSlide < slides.length - 1) {
       currentSlide++;
       moveSlider();
     }
   });
 
-  window.addEventListener('resize', moveSlider);
+  window.addEventListener('resize', () => {
+    moveSlider();
+  });
 
   moveSlider();
 });
