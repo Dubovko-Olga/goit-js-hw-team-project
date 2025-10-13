@@ -2,17 +2,6 @@
   background-color: #fff6f0;
   padding: 64px 16px;
 }
-@media (min-width: 768px) {
-  .article {
-    padding: 64px 32px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .article {
-    padding: 64px 64px;
-  }
-}
 
 .article-container {
   display: flex;
@@ -23,70 +12,66 @@
   max-width: 1312px;
   margin: 0 auto;
   width: 100%;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-  }
 }
 
 .article-content {
   flex: 1 1 50%;
   max-width: 600px;
-
-  .article-title {
-    font-size: 36px;
-    font-weight: 600;
-    color: #0b0500;
-    line-height: 1.2;
-    margin-bottom: 24px;
-
-    @media (min-width: 768px) {
-    }
-
-    @media (min-width: 1440px) {
-      font-size: 40px;
-    }
-  }
-
-  .article-text {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 150%;
-    color: #0b0500;
-
-    @media (min-width: 768px) {
-      font-size: 18px;
-    }
-  }
 }
 
 .article-image-wrapper {
   flex: 1 1 50%;
   display: flex;
   justify-content: center;
+}
+
+.article-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #0b0500;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.article-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  color: #0b0500;
+}
+
+@media (min-width: 768px) {
+  .article {
+    padding: 64px 32px;
+  }
+
+  .article-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .article-title {
+    font-size: 38px;
+  }
 
   .article-image {
-    width: 342px;
-    height: 248px;
-    border-width: 1px;
-    border-radius: 16px;
-    object-fit: cover;
-    margin: 0 auto;
-    display: block;
+    width: 704px;
+    height: 474px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .article {
+    padding: 64px 64px;
   }
 
-  @media (min-width: 768px) {
-    .article-image {
-      width: 704px;
-      height: 474px;
-    }
+  .article-title {
+    font-size: 40px;
   }
 
-  @media (min-width: 1440px) {
-    .article-image {
-      width: 640px;
-    }
+  .article-image {
+    width: 640px;
+    height: auto;
   }
 }
