@@ -1,4 +1,4 @@
-<section class="feedbacks" aria-labelledby="feedbacks-title">
+<section id="feedbacks" class="feedbacks" aria-labelledby="feedbacks-title">
   <div class="container">
     <div class="feedbacks__inner">
       <div class="feedbacks__head">
@@ -6,8 +6,13 @@
         <p class="feedbacks__subtitle">See what our readers are saying about us!</p>
       </div>
 
+<<<<<<< HEAD
       <!-- SLIDER -->
       <div class=" swiper" aria-roledescription="carousel" aria-label="Customer feedbacks slider">
+=======
+
+      <div class="swiper feedbacks__swiper" aria-roledescription="carousel" aria-label="Customer feedbacks slider">
+>>>>>>> 6e9d6b9bf2012c62529252eb1962a03da5f53f14
         <ul class="swiper-wrapper" role="list">
 
           <li class="swiper-slide feedbacks__card" role="listitem">
@@ -49,7 +54,7 @@
             </div>
           </li>
 
-          <!-- 4..12 -->
+
           <li class="swiper-slide feedbacks__card" role="listitem">
             <p class="feedbacks__text">Packaging was eco-friendly and sturdy. The books arrived in perfect condition. Will shop again!</p>
             <div class="feedbacks__user">
@@ -170,26 +175,26 @@
         </ul>
       </div>
 
-      <!-- CONTROLS UNDER THE SLIDER -->
+
       <div class="feedbacks__controls" aria-label="Slider controls row">
         <div class="feedbacks__pagination" aria-label="Slider pagination"></div>
         <div class="feedbacks__nav">
 
-          <!-- prev -->
+
 <button class="feedbacks__btn feedbacks__btn--prev" type="button" aria-label="Previous slide">
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M16 12H7" />
-    <path d="M13 7l-6 5 6 5" />
+  <svg class="feedbacks__icon" width="14" height="14" aria-hidden="true">
+
+    <use href="./img/icons.svg#icon-left"></use>
   </svg>
 </button>
 
-<!-- next -->
+
 <button class="feedbacks__btn feedbacks__btn--next" type="button" aria-label="Next slide">
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M8 12h9" />
-    <path d="M11 7l6 5-6 5" />
+  <svg class="feedbacks__icon" width="14" height="14" aria-hidden="true">
+    <use href="./img/icons.svg#icon-right"></use>
   </svg>
 </button>
+
 
 
         </div>

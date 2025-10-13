@@ -1,20 +1,9 @@
-.article {
-  background-color: #fff6f0;
-  padding: 64px 16px;
-}
-@media (min-width: 768px) {
-  .article {
-    padding: 64px 32px;
-  }
+.article .container {
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 
-@media (min-width: 1440px) {
-  .article {
-    padding: 64px 64px;
-  }
-}
-
-.article-container {
+.article .container {
   display: flex;
   flex-direction: column;
   align-items: center;
