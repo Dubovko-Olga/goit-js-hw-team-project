@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+export function initHeroSlider() {
   const swiperWrapper = document.querySelector('.hero-swiper-wrapper');
   const slides = document.querySelectorAll('.hero-swiper-slide');
   const prevBtn = document.querySelector('.hero-btn-left');
@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentSlide = 0;
 
+  // Оновлює стан кнопок "Previous" та "Next"
   const updateButtons = () => {
     if (currentSlide === 0) {
       prevBtn.classList.add('disabled');
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  // Функція для переміщення слайдера
   const moveSlider = () => {
     const slideWidth = slides[0].offsetWidth;
     swiperWrapper.style.transform = `translateX(-${
@@ -32,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateButtons();
   };
 
+  // Обробник події для кнопки "Previous"
   prevBtn.addEventListener('click', () => {
     if (currentSlide > 0) {
       currentSlide--;
@@ -39,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Обробник події для кнопки "Next"
   nextBtn.addEventListener('click', () => {
     if (currentSlide < slides.length - 1) {
       currentSlide++;
@@ -46,9 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Обробка події зміни розміру
   window.addEventListener('resize', () => {
     moveSlider();
   });
 
+  // Ініціалізація слайдера
   moveSlider();
-});
+}
