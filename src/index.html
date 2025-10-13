@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     <link rel="stylesheet" href="./css/styles.css" />
@@ -19,7 +19,6 @@
     <load src="/partials/header.html" icon-path="img/sprite.svg#logo" />
 
     <main>
-      <!-- Loads the specified .html file -->
       <load src="./partials/hero.html" />
       <load src="/partials/books.html" />
       <load src="/partials/feedbacks.html" />
@@ -33,7 +32,22 @@
     <load src="/partials/footer.html" />
 
     <script type="module" src="./main.js"></script>
+
     <script type="module" src="./js/events.js"></script>
     <script type="module" src="./js/modal.js"></script>
+
+    <button id="scrollUp" class="scrollup" aria-label="Scroll to top" hidden>
+      <svg
+        class="scrollup__icon"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path d="M12 5l-7 7h4v7h6v-7h4z" fill="currentColor" />
+      </svg>
+    </button>
+
+    >>>>>>> origin/main
   </body>
 </html>
