@@ -1,5 +1,4 @@
 
-
 export function initHeroSlider() {
   const swiperWrapper = document.querySelector('.swiper-wrapper');
   const slides = document.querySelectorAll('.swiper-slide');
