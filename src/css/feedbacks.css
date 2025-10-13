@@ -42,7 +42,7 @@
 }
 
 
-.feedbacks__swiper .feedbacks-swiper-wrapper {
+.swiper-wrapper {
   list-style: none;
   margin: 0;
   padding: 0;
