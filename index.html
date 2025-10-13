@@ -16,7 +16,7 @@
     <script type="module" crossorigin src="/goit-js-hw-team-project/index.js"></script>
     <link rel="modulepreload" crossorigin href="/goit-js-hw-team-project/assets/vendor-DnUEYdg3.js">
     <link rel="stylesheet" crossorigin href="/goit-js-hw-team-project/assets/vendor-BB0hfab5.css">
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-team-project/assets/index-B0dGr4cm.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-team-project/assets/index-60vqxeFi.css">
   </head>
   <body>
     <!DOCTYPE html>
@@ -79,21 +79,21 @@
       
 <section class="hero-section" id="hero">
   <div class="container">
-        <div class="swiper">
-        <ul class="swiper-wrapper">
-          <li class="swiper-slide  book1">
+        <div class="hero-swiper">
+        <ul class="hero-swiper-wrapper">
+          <li class="hero-swiper-slide  book1">
             <h2 class="hero-discount">Get 10% off <br> your first order</h2>
             <a href="#books" class="shop-btn">Shop Now!</a>
           </li>
-          <li class="swiper-slide  book2">
+          <li class="hero-swiper-slide  book2">
             <h2 class="hero-discount">Seva 15% on <br> some books</h2>
             <a href="#books" class="shop-btn">Shop Now!</a>
           </li>
-          <li class="swiper-slide  book3">
+          <li class="hero-swiper-slide  book3">
             <h2 class="hero-discount">Summer Sale! <br> Up to -40% discounts</h2>
             <a href="#books" class="shop-btn">Shop Now!</a>
           </li>
-          <li class="swiper-slide  book4">
+          <li class="hero-swiper-slide  book4">
             <h2 class="hero-discount">
               Last chance to buy <br> our spring bestsellers
             </h2>
@@ -103,7 +103,7 @@
         </div>
       <div class="hero-deck">
          <h1 class="hero-title">Discover Your Next Great Read Today!</h1>
-      <div class="swiper-navigation">
+      <div class="hero-swiper-navigation">
         <!-- Кнопка "Назад"  -->
         <button
           type="button"
@@ -167,20 +167,35 @@
   <div class="container">
     <div class="feedbacks__inner">
       <div class="feedbacks__head">
-        <h2 id="feedbacks-title" class="feedbacks__title">Customer Feedbacks</h2>
-        <p class="feedbacks__subtitle">See what our readers are saying about us!</p>
+        <h2 id="feedbacks-title" class="feedbacks__title">
+          Customer Feedbacks
+        </h2>
+        <p class="feedbacks__subtitle">
+          See what our readers are saying about us!
+        </p>
       </div>
 
-
-      <div class="swiper feedbacks__swiper" aria-roledescription="carousel" aria-label="Customer feedbacks slider">
+      <div
+        class="swiper"
+        aria-roledescription="carousel"
+        aria-label="Customer feedbacks slider"
+      >
         <ul class="swiper-wrapper" role="list">
-
           <li class="swiper-slide feedbacks__card" role="listitem">
-            <p class="feedbacks__text">Great selection, fast delivery, and beautifully packaged books. My go-to store for weekend reads!</p>
+            <p class="feedbacks__text">
+              Great selection, fast delivery, and beautifully packaged books. My
+              go-to store for weekend reads!
+            </p>
             <div class="feedbacks__user">
-              <img class="feedbacks__avatar" src="/goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg"
-                   srcset="/goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg 1x, /goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg 2x"
-                   width="48" height="48" loading="lazy" alt="Jane Doe avatar" />
+              <img
+                class="feedbacks__avatar"
+                src="/goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg"
+                srcset="/goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg 1x, /goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg 2x"
+                width="48"
+                height="48"
+                loading="lazy"
+                alt="Jane Doe avatar"
+              />
               <div class="feedbacks__meta">
                 <span class="feedbacks__name">Jane Doe</span>
                 <span class="feedbacks__role">Book Lover, Reader</span>
@@ -189,11 +204,20 @@
           </li>
 
           <li class="swiper-slide feedbacks__card" role="listitem">
-            <p class="feedbacks__text">Customer service was super helpful, and my order arrived earlier than expected. Highly recommend!</p>
+            <p class="feedbacks__text">
+              Customer service was super helpful, and my order arrived earlier
+              than expected. Highly recommend!
+            </p>
             <div class="feedbacks__user">
-              <img class="feedbacks__avatar" src="/goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png"
-                   srcset="/goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png 1x, /goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png 2x"
-                   width="48" height="48" loading="lazy" alt="John Smith avatar" />
+              <img
+                class="feedbacks__avatar"
+                src="/goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png"
+                srcset="/goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png 1x, /goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png 2x"
+                width="48"
+                height="48"
+                loading="lazy"
+                alt="John Smith avatar"
+              />
               <div class="feedbacks__meta">
                 <span class="feedbacks__name">John Smith</span>
                 <span class="feedbacks__role">Editor, BookMag</span>
@@ -202,51 +226,20 @@
           </li>
 
           <li class="swiper-slide feedbacks__card" role="listitem">
-            <p class="feedbacks__text">Love the curated picks and clear descriptions. Makes it easy to find my next favorite book.</p>
+            <p class="feedbacks__text">
+              Love the curated picks and clear descriptions. Makes it easy to
+              find my next favorite book.
+            </p>
             <div class="feedbacks__user">
-              <img class="feedbacks__avatar" src="./img/feedbacks/emily-1x.jpg"
-                   srcset="./img/feedbacks/emily-1x.jpg 1x, ./img/feedbacks/emily-2x.jpg 2x"
-                   width="48" height="48" loading="lazy" alt="Emily Johnson avatar" />
-              <div class="feedbacks__meta">
-                <span class="feedbacks__name">Emily Johnson</span>
-                <span class="feedbacks__role">Author, Novelist</span>
-              </div>
-            </div>
-          </li>
-
-
-          <li class="swiper-slide feedbacks__card" role="listitem">
-            <p class="feedbacks__text">Packaging was eco-friendly and sturdy. The books arrived in perfect condition. Will shop again!</p>
-            <div class="feedbacks__user">
-              <img class="feedbacks__avatar" src="/goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg"
-                   srcset="/goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg 1x, /goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg 2x"
-                   width="48" height="48" loading="lazy" alt="Jane Doe avatar" />
-              <div class="feedbacks__meta">
-                <span class="feedbacks__name">Jane Doe</span>
-                <span class="feedbacks__role">Book Lover, Reader</span>
-              </div>
-            </div>
-          </li>
-
-          <li class="swiper-slide feedbacks__card" role="listitem">
-            <p class="feedbacks__text">The recommendations feel personalized. I’ve discovered several new authors I now adore.</p>
-            <div class="feedbacks__user">
-              <img class="feedbacks__avatar" src="/goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png"
-                   srcset="/goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png 1x, /goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png 2x"
-                   width="48" height="48" loading="lazy" alt="John Smith avatar" />
-              <div class="feedbacks__meta">
-                <span class="feedbacks__name">John Smith</span>
-                <span class="feedbacks__role">Editor, BookMag</span>
-              </div>
-            </div>
-          </li>
-
-          <li class="swiper-slide feedbacks__card" role="listitem">
-            <p class="feedbacks__text">Fast checkout and reliable delivery. The site is easy to navigate and filters really help.</p>
-            <div class="feedbacks__user">
-              <img class="feedbacks__avatar" src="./img/feedbacks/emily-1x.jpg"
-                   srcset="./img/feedbacks/emily-1x.jpg 1x, ./img/feedbacks/emily-2x.jpg 2x"
-                   width="48" height="48" loading="lazy" alt="Emily Johnson avatar" />
+              <img
+                class="feedbacks__avatar"
+                src="/img/feedbacks/emily-1x.jpg"
+                srcset="/img/feedbacks/emily-1x.jpg 1x, /img/feedbacks/emily-2x.jpg 2x"
+                width="48"
+                height="48"
+                loading="lazy"
+                alt="Emily Johnson avatar"
+              />
               <div class="feedbacks__meta">
                 <span class="feedbacks__name">Emily Johnson</span>
                 <span class="feedbacks__role">Author, Novelist</span>
@@ -255,24 +248,20 @@
           </li>
 
           <li class="swiper-slide feedbacks__card" role="listitem">
-            <p class="feedbacks__text">Excellent selection of non-fiction. I’ve found rare titles I couldn’t get elsewhere.</p>
+            <p class="feedbacks__text">
+              Packaging was eco-friendly and sturdy. The books arrived in
+              perfect condition. Will shop again!
+            </p>
             <div class="feedbacks__user">
-              <img class="feedbacks__avatar" src="/goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png"
-                   srcset="/goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png 1x, /goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png 2x"
-                   width="48" height="48" loading="lazy" alt="John Smith avatar" />
-              <div class="feedbacks__meta">
-                <span class="feedbacks__name">John Smith</span>
-                <span class="feedbacks__role">Editor, BookMag</span>
-              </div>
-            </div>
-          </li>
-
-          <li class="swiper-slide feedbacks__card" role="listitem">
-            <p class="feedbacks__text">I appreciate the staff picks — they never miss! Always something new to inspire me.</p>
-            <div class="feedbacks__user">
-              <img class="feedbacks__avatar" src="/goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg"
-                   srcset="/goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg 1x, /goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg 2x"
-                   width="48" height="48" loading="lazy" alt="Jane Doe avatar" />
+              <img
+                class="feedbacks__avatar"
+                src="/goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg"
+                srcset="/goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg 1x, /goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg 2x"
+                width="48"
+                height="48"
+                loading="lazy"
+                alt="Jane Doe avatar"
+              />
               <div class="feedbacks__meta">
                 <span class="feedbacks__name">Jane Doe</span>
                 <span class="feedbacks__role">Book Lover, Reader</span>
@@ -281,11 +270,42 @@
           </li>
 
           <li class="swiper-slide feedbacks__card" role="listitem">
-            <p class="feedbacks__text">Gift wrapping looked amazing. My friend loved it — will use again for birthdays (that's good).</p>
+            <p class="feedbacks__text">
+              The recommendations feel personalized. I’ve discovered several new
+              authors I now adore.
+            </p>
             <div class="feedbacks__user">
-              <img class="feedbacks__avatar" src="./img/feedbacks/emily-1x.jpg"
-                   srcset="./img/feedbacks/emily-1x.jpg 1x, ./img/feedbacks/emily-2x.jpg 2x"
-                   width="48" height="48" loading="lazy" alt="Emily Johnson avatar" />
+              <img
+                class="feedbacks__avatar"
+                src="/goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png"
+                srcset="/goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png 1x, /goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png 2x"
+                width="48"
+                height="48"
+                loading="lazy"
+                alt="John Smith avatar"
+              />
+              <div class="feedbacks__meta">
+                <span class="feedbacks__name">John Smith</span>
+                <span class="feedbacks__role">Editor, BookMag</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="swiper-slide feedbacks__card" role="listitem">
+            <p class="feedbacks__text">
+              Fast checkout and reliable delivery. The site is easy to navigate
+              and filters really help.
+            </p>
+            <div class="feedbacks__user">
+              <img
+                class="feedbacks__avatar"
+                src="/img/feedbacks/emily-1x.jpg"
+                srcset="/img/feedbacks/emily-1x.jpg 1x, /img/feedbacks/emily-2x.jpg 2x"
+                width="48"
+                height="48"
+                loading="lazy"
+                alt="Emily Johnson avatar"
+              />
               <div class="feedbacks__meta">
                 <span class="feedbacks__name">Emily Johnson</span>
                 <span class="feedbacks__role">Author, Novelist</span>
@@ -294,11 +314,20 @@
           </li>
 
           <li class="swiper-slide feedbacks__card" role="listitem">
-            <p class="feedbacks__text">Clear descriptions and honest reviews. Helps me pick the right edition every time.</p>
+            <p class="feedbacks__text">
+              Excellent selection of non-fiction. I’ve found rare titles I
+              couldn’t get elsewhere.
+            </p>
             <div class="feedbacks__user">
-              <img class="feedbacks__avatar" src="/goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png"
-                   srcset="/goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png 1x, /goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png 2x"
-                   width="48" height="48" loading="lazy" alt="John Smith avatar" />
+              <img
+                class="feedbacks__avatar"
+                src="/goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png"
+                srcset="/goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png 1x, /goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png 2x"
+                width="48"
+                height="48"
+                loading="lazy"
+                alt="John Smith avatar"
+              />
               <div class="feedbacks__meta">
                 <span class="feedbacks__name">John Smith</span>
                 <span class="feedbacks__role">Editor, BookMag</span>
@@ -307,11 +336,20 @@
           </li>
 
           <li class="swiper-slide feedbacks__card" role="listitem">
-            <p class="feedbacks__text">Great loyalty discounts. It’s become my default store for new releases (that's good).</p>
+            <p class="feedbacks__text">
+              I appreciate the staff picks — they never miss! Always something
+              new to inspire me.
+            </p>
             <div class="feedbacks__user">
-              <img class="feedbacks__avatar" src="/goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg"
-                   srcset="/goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg 1x, /goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg 2x"
-                   width="48" height="48" loading="lazy" alt="Jane Doe avatar" />
+              <img
+                class="feedbacks__avatar"
+                src="/goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg"
+                srcset="/goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg 1x, /goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg 2x"
+                width="48"
+                height="48"
+                loading="lazy"
+                alt="Jane Doe avatar"
+              />
               <div class="feedbacks__meta">
                 <span class="feedbacks__name">Jane Doe</span>
                 <span class="feedbacks__role">Book Lover, Reader</span>
@@ -320,11 +358,42 @@
           </li>
 
           <li class="swiper-slide feedbacks__card" role="listitem">
-            <p class="feedbacks__text">Customer support quickly fixed a delivery issue. Impressed with the service quality.</p>
+            <p class="feedbacks__text">
+              Gift wrapping looked amazing. My friend loved it — will use again
+              for birthdays (that's good).
+            </p>
             <div class="feedbacks__user">
-              <img class="feedbacks__avatar" src="/goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png"
-                   srcset="/goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png 1x, /goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png 2x"
-                   width="48" height="48" loading="lazy" alt="John Smith avatar" />
+              <img
+                class="feedbacks__avatar"
+                src="/img/feedbacks/emily-1x.jpg"
+                srcset="/img/feedbacks/emily-1x.jpg 1x, /img/feedbacks/emily-2x.jpg 2x"
+                width="48"
+                height="48"
+                loading="lazy"
+                alt="Emily Johnson avatar"
+              />
+              <div class="feedbacks__meta">
+                <span class="feedbacks__name">Emily Johnson</span>
+                <span class="feedbacks__role">Author, Novelist</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="swiper-slide feedbacks__card" role="listitem">
+            <p class="feedbacks__text">
+              Clear descriptions and honest reviews. Helps me pick the right
+              edition every time.
+            </p>
+            <div class="feedbacks__user">
+              <img
+                class="feedbacks__avatar"
+                src="/goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png"
+                srcset="/goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png 1x, /goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png 2x"
+                width="48"
+                height="48"
+                loading="lazy"
+                alt="John Smith avatar"
+              />
               <div class="feedbacks__meta">
                 <span class="feedbacks__name">John Smith</span>
                 <span class="feedbacks__role">Editor, BookMag</span>
@@ -332,31 +401,84 @@
             </div>
           </li>
 
+          <li class="swiper-slide feedbacks__card" role="listitem">
+            <p class="feedbacks__text">
+              Great loyalty discounts. It’s become my default store for new
+              releases (that's good).
+            </p>
+            <div class="feedbacks__user">
+              <img
+                class="feedbacks__avatar"
+                src="/goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg"
+                srcset="/goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg 1x, /goit-js-hw-team-project/assets/jane-1x-DQ84jRUH.jpg 2x"
+                width="48"
+                height="48"
+                loading="lazy"
+                alt="Jane Doe avatar"
+              />
+              <div class="feedbacks__meta">
+                <span class="feedbacks__name">Jane Doe</span>
+                <span class="feedbacks__role">Book Lover, Reader</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="swiper-slide feedbacks__card" role="listitem">
+            <p class="feedbacks__text">
+              Customer support quickly fixed a delivery issue. Impressed with
+              the service quality.
+            </p>
+            <div class="feedbacks__user">
+              <img
+                class="feedbacks__avatar"
+                src="/goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png"
+                srcset="/goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png 1x, /goit-js-hw-team-project/assets/john-1x-Cc4BfkPe.png 2x"
+                width="48"
+                height="48"
+                loading="lazy"
+                alt="John Smith avatar"
+              />
+              <div class="feedbacks__meta">
+                <span class="feedbacks__name">John Smith</span>
+                <span class="feedbacks__role">Editor, BookMag</span>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
-
 
       <div class="feedbacks__controls" aria-label="Slider controls row">
         <div class="feedbacks__pagination" aria-label="Slider pagination"></div>
         <div class="feedbacks__nav">
+          <button
+            class="feedbacks__btn feedbacks__btn--prev"
+            type="button"
+            aria-label="Previous slide"
+          >
+            <svg
+              class="feedbacks__icon"
+              width="14"
+              height="14"
+              aria-hidden="true"
+            >
+              <use href="/goit-js-hw-team-project/assets/icons-bVAOBUyy.svg#icon-left"></use>
+            </svg>
+          </button>
 
-
-<button class="feedbacks__btn feedbacks__btn--prev" type="button" aria-label="Previous slide">
-  <svg class="feedbacks__icon" width="14" height="14" aria-hidden="true">
-
-    <use href="/goit-js-hw-team-project/assets/icons-bVAOBUyy.svg#icon-left"></use>
-  </svg>
-</button>
-
-
-<button class="feedbacks__btn feedbacks__btn--next" type="button" aria-label="Next slide">
-  <svg class="feedbacks__icon" width="14" height="14" aria-hidden="true">
-    <use href="/goit-js-hw-team-project/assets/icons-bVAOBUyy.svg#icon-right"></use>
-  </svg>
-</button>
-
-
-
+          <button
+            class="feedbacks__btn feedbacks__btn--next"
+            type="button"
+            aria-label="Next slide"
+          >
+            <svg
+              class="feedbacks__icon"
+              width="14"
+              height="14"
+              aria-hidden="true"
+            >
+              <use href="/goit-js-hw-team-project/assets/icons-bVAOBUyy.svg#icon-right"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
@@ -365,7 +487,7 @@
 
       
       <section class="article">
-  <div class="article-container">
+  <div class="container">
     <div class="article-content">
       <h1 class="article-title">
         Welcome to Booksy – your cozy corner for handpicked reads.
@@ -381,18 +503,18 @@
       <picture>
         <source
           media="(max-width: 767px)"
-          srcset="./img/article-mob-1x.jpg 1x, ./img/article-mob-2x.jpg 2x"
+          srcset="/goit-js-hw-team-project/assets/bookshelves-mob-1x-Pk0ChWXv.jpg 1x, /goit-js-hw-team-project/assets/bookshelves-mob-2x-BAjW2IlI.jpg 2x"
         />
         <source
           media="(min-width: 768px) and (max-width: 1439px)"
-          srcset="./img/article-tabl-1x.jpg 1x, ./img/article-tabl-2x.jpg 2x"
+          srcset="/goit-js-hw-team-project/assets/bookshelves-tabl-1x-iey2gJbE.jpg 1x, /goit-js-hw-team-project/assets/bookshelves-tabl-2x-B09U1Sk4.jpg 2x"
         />
         <source
           media="(min-width: 1440px)"
-          srcset="../img/article-desk-1x.jpg 1x, ../img/article-desk-2x.jpg 2x"
+          srcset="/goit-js-hw-team-project/assets/bookshelves-desk-1x-C0yQmaNq.jpg 1x, /goit-js-hw-team-project/assets/bookshelves-desk-2x-B-XgJgjb.jpg 2x"
         />
         <img
-          src="../img/article-desk-1x.jpg"
+          src="/goit-js-hw-team-project/assets/bookshelves-desk-1x-C0yQmaNq.jpg"
           alt="Person reading in cozy library"
           class="article-image"
         />
