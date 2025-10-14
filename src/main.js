@@ -7,7 +7,9 @@ import './js/events.js';
 import './js/modal.js';
 
 import './js/scrollup.js';
+import './js/footer';
 import './js/book-modal.js';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   initFeedbacks();
