@@ -30,7 +30,7 @@ body.modal-open {
   padding-right: 16px;
   padding-bottom: 64px;
   border-radius: 12px;
-  max-width: 900px; /* ✅ ширина увеличивается с экраном */
+  max-width: 900px;
   width: 100%;
   height: auto;
 
@@ -56,6 +56,12 @@ body.modal-open {
 .modal-content {
   display: flex;
   flex-direction: column;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.modal-content::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
 .modal-book-image {
@@ -77,6 +83,7 @@ body.modal-open {
   flex-direction: column;
   gap: 24px;
   margin-bottom: 32px;
+  flex-wrap: wrap;
 }
 
 .accordion-header {
@@ -100,7 +107,7 @@ body.modal-open {
   display: none !important;
 }
 .accordion-container .ac .ac-header .ac-trigger {
-  display: flex !important; /* 👉 принудительно перекрываем */
+  display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
   width: 100% !important;
@@ -128,7 +135,7 @@ body.modal-open {
   line-height: 1.5 !important;
   color: #0b0500 !important;
 }
-/* Контейнер стрелок */
+
 .accordion-container .ac .ac-header .ac-icons {
   margin-left: auto !important;
   display: inline-flex !important;
@@ -137,12 +144,10 @@ body.modal-open {
   gap: 4px !important;
 }
 
-/* По умолчанию показываем “плюс” */
 .accordion-container .ac .ac-header .arrow-open {
   display: none !important;
 }
 
-/* Когда секция открыта — меняем иконку */
 .accordion-container .ac.is-active .arrow-close {
   display: none !important;
 }
@@ -275,8 +280,8 @@ body.modal-open {
   border-radius: 50%;
 }
 .book-modal-close svg {
-  padding: 8px; /* добавь нужные отступы */
-  box-sizing: content-box; /* чтобы SVG не сжималась */
+  padding: 8px;
+  box-sizing: content-box;
   flex-shrink: 0;
   cursor: pointer;
 }
@@ -291,7 +296,8 @@ body.modal-open {
   .modal-content {
     display: flex;
     flex-direction: row;
-
+    max-height: none !important;
+    overflow-y: visible !important;
     gap: 24px;
   }
   .modal-book-image {

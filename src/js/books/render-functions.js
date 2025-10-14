@@ -152,6 +152,7 @@ function updateCounter() {
 
 export function onLoadMore() {
   renderNextBooks(LOAD_MORE_COUNT);
+  smoothScroll();
 }
 
 export async function onCategoryClick(event) {
@@ -186,3 +187,16 @@ window.addEventListener('resize', () => {
     createCategories();
   }
 });
+
+function smoothScroll() {
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  if (!galleryItems.length) return;
+
+  const lastItem = galleryItems[galleryItems.length - 1];
+  const lastItemHeight = lastItem.getBoundingClientRect().height;
+
+  window.scrollBy({
+    top: lastItemHeight + 16,
+    behavior: 'smooth',
+  });
+}
