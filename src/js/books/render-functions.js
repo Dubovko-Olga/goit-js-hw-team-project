@@ -152,7 +152,6 @@ function updateCounter() {
 
 export function onLoadMore() {
   renderNextBooks(LOAD_MORE_COUNT);
-  smoothScroll();
 }
 
 export async function onCategoryClick(event) {
@@ -187,14 +186,3 @@ window.addEventListener('resize', () => {
     createCategories();
   }
 });
-
-function smoothScroll() {
-  const { height } = document
-    .querySelector('.gallery-item')
-    .getBoundingClientRect();
-
-  window.scrollBy({
-    top: height * 2,
-    behavior: 'smooth',
-  });
-}
