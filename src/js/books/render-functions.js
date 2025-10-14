@@ -141,6 +141,7 @@ function renderNextBooks(count) {
     currentIndex >= currentBooks.length ? 'none' : 'block';
 
   addLearnMoreListeners();
+  updateCounter();
 }
 
 function updateCounter() {
