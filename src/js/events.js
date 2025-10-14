@@ -3,13 +3,37 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 document.addEventListener('DOMContentLoaded', () => {
   const swiperEl = document.querySelector('.events-swiper');
+  const prevBtn = document.querySelector('.events-swiper-btn-prev');
+  const nextBtn = document.querySelector('.events-swiper-btn-next');
+
   if (!swiperEl) return;
 
   let swiperInstance = null;
 
+  function updateNavigationState(swiper) {
+    if (!swiper) return;
+
+    // Якщо на першому слайді – блокуємо Prev
+    if (swiper.isBeginning) {
+      prevBtn.disabled = true;
+      prevBtn.classList.add('disabled');
+    } else {
+      prevBtn.disabled = false;
+      prevBtn.classList.remove('disabled');
+    }
+
+    // Якщо на останньому слайді – блокуємо Next
+    if (swiper.isEnd) {
+      nextBtn.disabled = true;
+      nextBtn.classList.add('disabled');
+    } else {
+      nextBtn.disabled = false;
+      nextBtn.classList.remove('disabled');
+    }
+  }
+
   function initSwiper() {
-    // якщо ширина екрана < 1280px і свайпер ще не створений
-    if (window.innerWidth < 1280 && !swiperInstance) {
+    if (window.innerWidth < 1440 && !swiperInstance) {
       swiperInstance = new Swiper(swiperEl, {
         modules: [Navigation, Pagination],
         slidesPerView: 1,
@@ -36,101 +60,39 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         watchOverflow: true,
+
+        on: {
+          init() {
+            updateNavigationState(this);
+          },
+          slideChange() {
+            updateNavigationState(this);
+          },
+        },
       });
     }
 
-    // якщо ширина екрана ≥ 1280px і свайпер існує — знищуємо його
-    else if (window.innerWidth >= 1280 && swiperInstance) {
+    // Якщо >=1440px – знищити Swiper і кнопки зробити неактивними
+    else if (window.innerWidth >= 1440 && swiperInstance) {
       swiperInstance.destroy(true, true);
       swiperInstance = null;
+
+      // Очистка стилів
       swiperEl.querySelectorAll('.swiper-slide').forEach(slide => {
         slide.removeAttribute('style');
       });
+
+      // Вимкнення кнопок
+      prevBtn.disabled = true;
+      nextBtn.disabled = true;
+      prevBtn.classList.add('disabled');
+      nextBtn.classList.add('disabled');
     }
   }
 
-  // викликаємо при завантаженні сторінки
+  // Викликаємо при завантаженні
   initSwiper();
 
-  // і ще раз при зміні розміру екрана
+  // Викликаємо при зміні розміру екрана
   window.addEventListener('resize', initSwiper);
-});
-
-// =================== modal open ===================
-
-// Отримуємо бекдроп
-const backdrop = document.getElementById('modal-backdrop');
-
-// Функція відкриття модалки
-function openModal(eventTitle) {
-  // Створюємо HTML модалки (якщо ще немає)
-  let modal = document.querySelector('.modal');
-  if (!modal) {
-    modal = document.createElement('div');
-    modal.classList.add('modal');
-
-    // Кнопка закриття
-    modal.innerHTML = `
-            <button class="modal-close" aria-label="Close modal">&times;</button>
-            <h2 class="modal-title">Register for Event</h2>
-            <p class="event-title">${eventTitle}</p>
-            <form class="modal-form">
-                <label>
-                    Name
-                    <input type="text" placeholder="Your name" required>
-                </label>
-                <label>
-                    Email
-                    <input type="email" placeholder="Your email" required>
-                </label>
-                <button type="submit">Submit</button>
-            </form>
-        `;
-    backdrop.appendChild(modal);
-
-    // Закриття по кнопці
-    modal.querySelector('.modal-close').addEventListener('click', closeModal);
-  } else {
-    let eventTitleEl = modal.querySelector('.event-title');
-    if (eventTitleEl) {
-      eventTitleEl.textContent = eventTitle;
-    } else {
-      // якщо не існує, додаємо елемент
-      const p = document.createElement('p');
-      p.classList.add('event-title');
-      p.textContent = eventTitle;
-      // вставляємо під заголовок
-      const modalTitle = modal.querySelector('.modal-title');
-      if (modalTitle) {
-        modalTitle.insertAdjacentElement('afterend', p);
-      } else {
-        modal.appendChild(p);
-      }
-    }
-  }
-
-  // Показуємо бекдроп
-  backdrop.classList.add('is-open');
-  document.body.classList.add('no-scroll');
-
-  // Закриття по кліку на бекдроп поза модалкою
-  backdrop.addEventListener('click', function handler(e) {
-    if (e.target === backdrop) closeModal();
-    backdrop.removeEventListener('click', handler);
-  });
-}
-
-// Функція закриття
-function closeModal() {
-  backdrop.classList.remove('is-open');
-  document.body.classList.remove('no-scroll');
-}
-
-// Прив'язуємо кнопки
-const registerButtons = document.querySelectorAll('.event-register-btn');
-registerButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const eventTitle = btn.dataset.event;
-    openModal(eventTitle);
-  });
 });
