@@ -42,7 +42,7 @@ body.modal-open {
   display: none;
 }
 
-.modal-close {
+.book-modal-close {
   position: absolute;
   top: 16px;
   right: 16px;
@@ -270,11 +270,11 @@ body.modal-open {
   text-align: center;
   color: #0b0500;
 }
-.modal-close:hover svg {
+.book-modal-close:hover svg {
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
-.modal-close svg {
+.book-modal-close svg {
   padding: 8px; /* добавь нужные отступы */
   box-sizing: content-box; /* чтобы SVG не сжималась */
   flex-shrink: 0;
