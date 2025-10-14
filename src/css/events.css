@@ -138,6 +138,13 @@
   width: 48px;
   height: 48px;
   background-color: #e15d05;
+  border: none;
+}
+.events-swiper-btn-prev,
+.events-swiper-btn-next:hover,
+.events-swiper-btn-prev,
+.events-swiper-btn-next:focus{
+background-color:#ea8d50;
 }
 .events-list {
   list-style: none;
