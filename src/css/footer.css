@@ -1,24 +1,22 @@
 /* ====== FOOTER (Mobile First) ====== */
 @media screen and (min-width: 375px) {
-    .footer {
-    background-color: #EA8D50;
-}
+  .footer {
+    background-color: #ea8d50;
+    padding: 80px 0;
+  }
 
-.footer .container {
-    background-color: #EA8D50;
-    max-width: 375px;
-    margin: 0 auto;
-    padding: 80px 16px;
-}
+  .footer .container {
+    background-color: #ea8d50;
+  }
 
-.footer-container {
+  .footer-container {
     display: flex;
     flex-direction: column;
     gap: 32px;
-}
+  }
 
-/* ====== Logo ====== */
-.logo-navigation-container {
+  /* ====== Logo ====== */
+  .logo-navigation-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -26,233 +24,230 @@
     align-items: center;
     gap: 32px;
     width: 100%;
-}
+  }
 
-.footer-logo {
+  .footer-logo {
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease;
-}
+  }
 
-.footer-logo:hover {
+  .footer-logo:hover {
     transform: scale(1.05);
-}
+  }
 
-.logo-icon {
+  .logo-icon {
     fill: #fff;
-}
+  }
 
-/* ====== Navigation ====== */
-.navigation-container {
+  /* ====== Navigation ====== */
+  .navigation-container {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+  }
 
-.navigation {
+  .navigation {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
     gap: 32px;
-}
+  }
 
-.navigation-link {
-    color: #0B0500;
+  .navigation-link {
+    color: #0b0500;
     text-decoration: none;
     font-size: 16px;
     font-weight: 400;
     transition: color 0.3s ease;
-}
+  }
 
-.navigation-link:hover,
-.navigation-link:focus {
-    color: #ffce00;  /*переглянути колір та змінити*/
-}
+  .navigation-link:hover,
+  .navigation-link:focus {
+    color: #ffce00; /*переглянути колір та змінити*/
+  }
 
-/* ====== Sign Up Section ====== */
-.sign-up-container {
+  /* ====== Sign Up Section ====== */
+  .sign-up-container {
     text-align: center;
-}
+  }
 
-.sign-up-title {
+  .sign-up-title {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 12px;
     line-height: 1.5;
-    color: #0B0500;
+    color: #0b0500;
     text-align: left;
-}
+  }
 
-.sign-up-form {
+  .sign-up-form {
     display: flex;
     gap: 16px;
     margin-bottom: 12px;
-}
+  }
 
-.footer-input {
+  .footer-input {
     width: 221px;
     height: 48px;
     padding: 12px;
-    border: 1px solid #0B050026;
+    border: 1px solid #0b050026;
     border-radius: 8px;
-    background-color: #0B05000D;
-    color: #0B050099;
+    background-color: #0b05000d;
+    color: #0b050099;
     outline: none;
     transition: border 0.3s ease;
-}
+  }
 
-.footer-input::placeholder {
-    color: #0B050099;
-}
+  .footer-input::placeholder {
+    color: #0b050099;
+  }
 
-.signup-button {
+  .signup-button {
     display: flex;
     flex-direction: row;
     gap: 8px;
-}
+  }
 
-.footer-input:focus {
-    border-color: #0B050099;
-}
+  .footer-input:focus {
+    border-color: #0b050099;
+  }
 
-.footer-button {
+  .footer-button {
     width: 106px;
     height: 48px;
-    background-color: #EA8D50;
-    color: #0B0500;
-    font-weight: 400;
+    background-color: #ea8d50;
+    color: #0b0500;
     font-size: 16px;
     padding: 12px 24px;
-    border: 1px solid #0B0500;
+    border: 1px solid #0b0500;
     border-radius: 4px;
-    cursor: pointer;
+    flex-wrap: nowrap;
     transition: background-color 0.3s ease, transform 0.2s ease;
-}
+  }
 
-
-
-.footer-button:hover {
-    background-color: #0B050099;
+  .footer-button:hover,
+  .footer-button:focus {
+    background-color: #b44a04;
+    border: 1px solid #b44a04;
     transform: translateY(-2px);
-}
+  }
 
-.sign-up-container p {
+  .sign-up-container p {
     font-size: 12px;
     font-weight: 400;
-    color: #0B0500;
+    color: #0b0500;
     text-align: left;
-}
+  }
 
-/* ====== Copyright ====== */
-.footer-copyright {
+  /* ====== Copyright ====== */
+  .footer-copyright {
     width: 100%;
     text-align: center;
-    border-top: 1px solid #FFFFFF;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);;
     margin-top: 40px;
     padding-top: 20px;
-}
+  }
 
-.footer-copyright-text {
+  .footer-copyright-text {
     font-size: 14px;
     font-weight: 400;
-    color: #0B0500;
-}
+    color: #0b0500;
+  }
 }
 /* === min-width: 375px (mobile adaptive start) === */
 @media (min-width: 375px) {
-    .sign-up-container {
-        max-width: 340px;
-    }
+  .sign-up-container {
+    max-width: 340px;
+  }
 }
 
 /* === min-width: 768px === */
 @media (min-width: 768px) {
-    .footer .container{
+  .footer .container {
     max-width: 640px;
     padding: 80px 64px;
-    }
-    
-    .logo-navigation-container{
-        gap: 32px;
-        width: 100%;
-    }
+  }
 
-    .footer-container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 32px;
-        text-align: center;
-    }
+  .logo-navigation-container {
+    gap: 32px;
+    width: 100%;
+  }
 
-    .footer-logo-container {
-        justify-content: center;
-    
-    }
-    
-    .navigation-container {
-        justify-content: center;
-    }
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    text-align: center;
+  }
 
-    .navigation {
-        flex-direction: row;
-        align-items: center;
-        gap: 32px;
-    }
+  .footer-logo-container {
+    justify-content: center;
+  }
 
-        .sign-up-container {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        max-width: 400px;
-        margin: 0 auto;
-        text-align: center;
-    }
+  .navigation-container {
+    justify-content: center;
+  }
 
-    .sign-up-form {
-        flex-direction: row;
-        align-items: center;
-    }
+  .navigation {
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
 
-    .footer-input {
-        width: 278px;
-        height: 48px;
+  .sign-up-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
 
-        border-radius: 4px;
-    }
+  .sign-up-form {
+    flex-direction: row;
+    align-items: center;
+  }
 
-    .footer-button {
-        flex-shrink: 0;
-    }
+  .footer-input {
+    width: 278px;
+    height: 48px;
 
+    border-radius: 4px;
+  }
+
+  .footer-button {
+    flex-shrink: 0;
+  }
 }
 
 /* === min-width: 1440px (desktop) === */
 @media (min-width: 1440px) {
-    .footer .container {
-        max-width: 1312px;
-        padding: 80px 64px;
-    }
-    
-    .logo-navigation-container {
-        flex-direction: column;
-        flex: 1;
-        text-align: left;
-        justify-content: left;
-        align-items: flex-start;
-    }
-    
-    .navigation {
-        flex-direction: row;
-    }
-    
-    .sign-up-container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        flex: 0 0 auto;
-    }
+  .footer .container {
+    max-width: 1312px;
+    padding: 80px 64px;
+  }
+
+  .logo-navigation-container {
+    flex-direction: column;
+    flex: 1;
+    text-align: left;
+    justify-content: left;
+    align-items: flex-start;
+  }
+
+  .navigation {
+    flex-direction: row;
+  }
+
+  .sign-up-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 0 0 auto;
+  }
 }
