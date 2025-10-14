@@ -1,218 +1,222 @@
 @media screen and (min-width: 375px) {
-body,
-.container {
-  background-color: #fceee6;
-}
-button:focus {
-  outline: none;
-}
-.load-more {
-  border: 1px solid #e15d05;
-  border-radius: 4px;
-  padding: 12px 24px;
-  width: 100%;
-  max-width: 342px;
-  margin: 0 auto;
-  display: block;
-  height: 48px;
-  background-color: #e15d05;
-  outline: none;
-  font-family: 'Rubik', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #fff;
-  margin-top: 24px;
-  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
+  body,
+  .container {
+    background-color: #fceee6;
+  }
+  button:focus {
+    outline: none;
+  }
+  .books {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .load-more {
+    border: 1px solid #e15d05;
+    border-radius: 4px;
+    padding: 12px 24px;
+    width: 100%;
+    max-width: 342px;
+    margin: 0 auto;
+    display: block;
+    height: 48px;
+    background-color: #e15d05;
+    outline: none;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+    margin-top: 24px;
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 
-.category-select {
-  border: 1px solid rgba(11, 5, 0, 0.15);
-  border-radius: 4px;
-  padding: 8px 12px;
-  width: 100%;
-  max-width: 342px;
-  background-color: rgba(11, 5, 0, 0.05);
-  font-family: 'Rubik', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.5;
-  color: transparent;
-}
+  .category-select {
+    border: 1px solid rgba(11, 5, 0, 0.15);
+    border-radius: 4px;
+    padding: 8px 12px;
+    width: 342px; /* ширина самого селекта */
+    max-width: 100%;
 
-.category-select:focus {
-  outline: none;
-}
+    background-color: rgba(11, 5, 0, 0.05);
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: transparent;
+  }
 
-.category-select option {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #0b0500;
-}
+  .category-select:focus {
+    outline: none;
+  }
 
-.select-wrapper {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  max-width: 342px;
-}
+  .category-select option {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #0b0500;
+  }
 
-.select-wrapper::before {
-  content: 'Categories';
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #0b0500;
-  font-family: 'Rubik', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.5;
-  pointer-events: none;
-}
-.select-icon {
-  position: absolute;
-  top: 50%;
-  right: 12px;
-  transform: translateY(-50%);
-  pointer-events: none;
-  fill: #0b0500;
-}
+  .select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 342px;
+  }
 
-.gallery {
-  list-style: none;
-  display: grid;
-  gap: 40px;
-  padding: 0;
-  grid-template-columns: 1fr;
-}
+  .select-wrapper::before {
+    content: 'Categories';
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0b0500;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    pointer-events: none;
+  }
+  .select-icon {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    fill: #0b0500;
+  }
 
-.gallery-item {
-  display: flex;
-  flex-direction: column;
-  background-color: #fceee6;
+  .gallery {
+    list-style: none;
+    display: grid;
+    gap: 40px;
+    padding: 0;
+    grid-template-columns: 1fr;
+  }
 
-  overflow: hidden;
-}
+  .gallery-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fceee6;
 
-.gallery-item img {
-  width: 100%;
-  height: 487px;
-  object-fit: cover;
-  display: block;
-  border-radius: 8px;
-}
-.book-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 16px;
-  gap: 16px;
-}
+    overflow: hidden;
+  }
 
-.book-title {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.5;
-  text-transform: capitalize;
-  color: #0b0500;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  min-width: 0;
-}
+  .gallery-item img {
+    width: 100%;
+    height: 487px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+  }
+  .book-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    gap: 16px;
+  }
 
-.book-price {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 1.5;
-  color: #0b0500;
-}
+  .book-title {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: capitalize;
+    color: #0b0500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+  }
 
-.book-author {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #0b0500;
-  margin-bottom: 16px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  min-width: 0;
-}
+  .book-price {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #0b0500;
+  }
 
-.learn-more {
-  border: 1px solid #0b0500;
-  border-radius: 4px;
-  padding: 8px 20px;
-  width: 343px;
-  height: 40px;
-  background-color: transparent;
-  margin: 0 auto;
-  font-family: 'Rubik', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #0b0500;
-  transition: color, background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
+  .book-author {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #0b0500;
+    margin-bottom: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+  }
 
-.load-more:hover {
-  background-color: #0b0500;
-  color: #fff;
-}
-.learn-more:hover {
-  background-color: #ea8d50;
-  color: #0b0500;
-}
-.left-panel {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-bottom: 24px;
-}
+  .learn-more {
+    border: 1px solid #0b0500;
+    border-radius: 4px;
+    padding: 8px 20px;
+    width: 343px;
+    height: 40px;
+    background-color: transparent;
+    margin: 0 auto;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #0b0500;
+    transition: color, background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-.header-row {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
-  margin-top: 32px;
-}
+  .load-more:hover {
+    background-color: #0b0500;
+    color: #fff;
+  }
+  .learn-more:hover {
+    background-color: #ea8d50;
+    color: #0b0500;
+  }
+  .left-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
 
-.subname {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 1.5;
-  color: #0b0500;
-}
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
 
-.counter {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #0b0500;
-}
+  .subname {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #0b0500;
+  }
+
+  .counter {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #0b0500;
+  }
 }
 @media (min-width: 768px) {
   .gallery {
