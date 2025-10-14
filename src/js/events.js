@@ -23,7 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
           el: '.ev-pagination',
           clickable: true,
           renderBullet: (index, className) =>
-            `<li class="${className}" aria-label="Go to slide ${index + 1}"></li>`,
+            `<li class="${className}" aria-label="Go to slide ${
+              index + 1
+            }"></li>`,
           bulletClass: 'ev-dot',
           bulletActiveClass: 'ev-dot--active',
         },
@@ -42,8 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
       swiperInstance.destroy(true, true);
       swiperInstance = null;
       swiperEl.querySelectorAll('.swiper-slide').forEach(slide => {
-    slide.removeAttribute('style');
-  });
+        slide.removeAttribute('style');
+      });
     }
   }
 
@@ -89,8 +91,22 @@ function openModal(eventTitle) {
     // Закриття по кнопці
     modal.querySelector('.modal-close').addEventListener('click', closeModal);
   } else {
-    // Якщо модалка вже є, просто оновлюємо заголовок події
-    modal.querySelector('.event-title').textContent = eventTitle;
+    let eventTitleEl = modal.querySelector('.event-title');
+    if (eventTitleEl) {
+      eventTitleEl.textContent = eventTitle;
+    } else {
+      // якщо не існує, додаємо елемент
+      const p = document.createElement('p');
+      p.classList.add('event-title');
+      p.textContent = eventTitle;
+      // вставляємо під заголовок
+      const modalTitle = modal.querySelector('.modal-title');
+      if (modalTitle) {
+        modalTitle.insertAdjacentElement('afterend', p);
+      } else {
+        modal.appendChild(p);
+      }
+    }
   }
 
   // Показуємо бекдроп

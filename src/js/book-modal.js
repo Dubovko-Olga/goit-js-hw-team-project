@@ -5,7 +5,7 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 const modalOverlay = document.querySelector('.modal-overlay');
-const modalClose = document.querySelector('.modal-close');
+const modalClose = document.querySelector('.modal-close-svg');
 const modalImg = document.querySelector('.modal-book-image');
 const modalTitle = document.querySelector('.modal-book-title');
 const modalAuthor = document.querySelector('.modal-book-author');
