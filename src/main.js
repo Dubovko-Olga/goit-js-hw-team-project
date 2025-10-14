@@ -4,11 +4,10 @@ import './js/header.js';
 import './js/books/books.js';
 import './js/scrollup.js';
 import './js/footer';
+import './js/book-modal.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
   initFeedbacks();
   initHeroSlider();
 });
-
-
