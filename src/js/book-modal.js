@@ -21,7 +21,6 @@ const Arrow = document.querySelector('.scrollup');
 let quantity = 1;
 let modalAccordion = null;
 
-// Открытие модалки
 function openModal(book) {
   // Сбрасываем количество
   quantity = 1;
@@ -37,7 +36,10 @@ function openModal(book) {
   // Открываем модалку
   modalOverlay.classList.remove('hidden');
   Arrow.classList.remove('is-visible');
-  document.body.classList.add('modal-open'); // блокировка скролла
+  document.body.classList.add('modal-open');
+
+  // ✅ Вешаем слушатель Escape при открытии
+  document.addEventListener('keydown', onEscKeyPress);
 
   // Инициализация аккордеона (только один раз)
   if (!modalAccordion) {
@@ -46,14 +48,11 @@ function openModal(book) {
       {
         duration: 300,
         openFirst: false,
-        multiple: true,
+        showMultiple: true,
       }
     );
   }
 }
-
-// Закрытие модалки
-document.addEventListener('keydown', onEscKeyPress);
 
 // === Закрити модалку ===
 function closeModal() {
@@ -114,6 +113,7 @@ addToCart.addEventListener('click', () => {
     message: `You added ${quantity} book${quantity > 1 ? 's' : ''} to cart`,
     position: 'topRight',
   });
+  closeModal();
 });
 
 buyNow.addEventListener('click', () => {
@@ -121,4 +121,5 @@ buyNow.addEventListener('click', () => {
     message: `You bought ${quantity} book${quantity > 1 ? 's' : ''}`,
     position: 'topRight',
   });
+  closeModal();
 });
