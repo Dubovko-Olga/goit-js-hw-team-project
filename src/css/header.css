@@ -1,10 +1,7 @@
 @media screen and (min-width: 375px) {
-.header {
-  background-color: #fceee6;
-  width: 100%;
-}
 
-.header-container {
+
+.header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,7 +34,9 @@
   color: #000;
   font-weight: 500;
 }
-
+.nav-link:hover{
+  color: #5a2502;
+}
 .menu-btn {
   display: block;
   background: none;

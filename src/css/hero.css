@@ -3,45 +3,194 @@
     padding-bottom: 32px;
   }
 
-  .book1 {
-    background-image: url(/img/hero-tabl-1x.jpg);
-  }
 
-  @media only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min-resolution: 192dpi) {
-    .book1 {
-      background-image: url(/img/hero-tabl-2x.jpg);
-    }
-  }
+.hero-swiper-slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.book1{
+  background-image: url('/img/hero-mob-1x.jpg');
+}
 
-  .book2 {
-    background-image: url(/img/slide-tabl-2-1x.jpg);
+@media screen and (max-width: 767px) {
+  .section {
+    background-image: url('/img/hero-mob-1x.jpg');
   }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min-resolution: 192dpi) {
-    .book1 {
-      background-image: url(/img/hero-tabl-2x.jpg);
-    }
-  }
+}
 
-  .book3 {
-    background-image: url(/img/slide-tabl-3-1x.jpg);
+
+@media screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .section {
+    background-image: url('/img/hero-mob-2x.jpg');
   }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min-resolution: 192dpi) {
-    .book3 {
-      background-image: url(/img/slide-tabl-3-2x.jpg);
-    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .section {
+    background-image: url('/img/hero-tabl-1x.jpg');
   }
-  .book4 {
-    background-image: url(/img/slide-tabl-4-1x.jpg);
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1439px) and (min-resolution: 192dpi) {
+  .section {
+    background-image: url('/img/hero-tabl-2x.jpg');
   }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min-resolution: 192dpi) {
-    .book4 {
-      background-image: url(/img/slide-tabl-4-2x.jpg);
-    }
+}
+
+@media screen and (min-width: 1440px) {
+  .section {
+    background-image: url('/img/hero-desk-1x.jpg');
   }
+}
+
+
+@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
+  .section {
+    background-image: url('/img/hero-desk-2x.jpg');
+  }
+}
+
+.book2{
+  background-image: url('/img/slide-mob-2-1x.jpg');
+}
+
+@media screen and (max-width: 767px) {
+  .section {
+    background-image: url('/img/slide-mob-2-1x.jpg');
+  }
+}
+
+
+@media screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .section {
+    background-image: url('/img/slide-mob-2-2x.jpg');
+  }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .section {
+    background-image: url('/img/slide-tabl-2-1x.jpg');
+  }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1439px) and (min-resolution: 192dpi) {
+  .section {
+    background-image: url('/img/slide-tabl-2-2x.jpg');
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section {
+    background-image: url('/img/slide-desk-2-1x.jpg');
+  }
+}
+
+
+@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
+  .section {
+    background-image: url('/img/slide-desk-2-2x.jpg');
+  }
+}
+
+.book3{
+  background-image: url('/img/slide-mob-3-1x.jpg');
+}
+
+@media screen and (max-width: 767px) {
+  .section {
+    background-image: url('/img/slide-mob-3-1x.jpg');
+  }
+}
+
+
+@media screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .section {
+    background-image: url('/img/slide-mob-3-2x.jpg');
+  }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .section {
+    background-image: url('/img/slide-tabl-3-1x.jpg');
+  }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1439px) and (min-resolution: 192dpi) {
+  .section {
+    background-image: url('/img/slide-tabl-3-2x.jpg');
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section {
+    background-image: url('/img/slide-desk-3-1x.jpg');
+  }
+}
+
+
+@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
+  .section {
+    background-image: url('/img/slide-desk-3-2x.jpg');
+  }
+}
+
+
+
+
+ .book4{
+  background-image: url('/img/slide-mob-4-1x.jpg');
+}
+
+@media screen and (max-width: 767px) {
+  .section {
+    background-image: url('/img/slide-mob-4-1x.jpg');
+  }
+}
+
+
+@media screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .section {
+    background-image: url('/img/slide-mob-4-2x.jpg');
+  }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .section {
+    background-image: url('/img/slide-tabl-4-1x.jpg');
+  }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1439px) and (min-resolution: 192dpi) {
+  .section {
+    background-image: url('/img/slide-tabl-4-2x.jpg');
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section {
+    background-image: url('/img/slide-desk-4-1x.jpg');
+  }
+}
+
+
+@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
+  .section {
+    background-image: url('/img/slide-desk-4-2x.jpg');
+  }
+}
+
+
+  
   .hero-swiper {
     overflow: hidden;
     max-width: 100%;
@@ -189,7 +338,6 @@
 }
 @media only screen and (min-width: 1440px) {
   .hero-section {
-    border: 1px solid #000;
     padding-bottom: 32px;
   }
 
