@@ -1,5 +1,5 @@
 import { getAllBooks, getCategories, getBookByCat, getBookById } from './api';
-
+import { addLearnMoreListeners } from '../book-modal';
 const gallery = document.querySelector('.gallery');
 const loadMoreBtn = document.querySelector('.load-more');
 const counter = document.querySelector('.counter');
@@ -119,7 +119,7 @@ function renderNextBooks(count) {
 
   const markup = nextBooks
     .map(
-      ({ author, title, book_image, price = '10.00' }) => `
+      ({ author, title, book_image, price = '10.00', _id }) => `
       <li class="gallery-item">
         <img src="${book_image}" alt="${title}">
         <div class = 'book-header'>
@@ -129,7 +129,7 @@ function renderNextBooks(count) {
         <p class="book-author">${author}</p>
         
         
-        <button class="learn-more">Learn More</button>
+        <button  class="learn-more" data-id="${_id}">Learn More</button>
       </li>`
     )
     .join('');
@@ -140,7 +140,6 @@ function renderNextBooks(count) {
   loadMoreBtn.style.display =
     currentIndex >= currentBooks.length ? 'none' : 'block';
 
-  updateCounter();
   addLearnMoreListeners();
 }
 
@@ -188,22 +187,6 @@ window.addEventListener('resize', () => {
     createCategories();
   }
 });
-function addLearnMoreListeners() {
-  const buttons = document.querySelectorAll('.learn-more');
-
-  buttons.forEach((btn, index) => {
-    btn.addEventListener('click', async () => {
-      try {
-        const book = currentBooks[index];
-        const fullBookData = await getBookById(book._id);
-
-        console.log(fullBookData);
-      } catch (error) {
-        console.error('Error fetching book by ID:', error);
-      }
-    });
-  });
-}
 
 function smoothScroll() {
   const { height } = document

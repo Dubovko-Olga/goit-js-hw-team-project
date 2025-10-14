@@ -2,6 +2,9 @@ body,
 .container {
   background-color: #fceee6;
 }
+button:focus {
+  outline: none;
+}
 .load-more {
   border: 1px solid #e15d05;
   border-radius: 4px;
