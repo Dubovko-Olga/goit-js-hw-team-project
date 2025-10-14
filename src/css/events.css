@@ -49,6 +49,8 @@
 .events-content {
   font-weight: 400;
   font-size: 16px;
+  line-height: 1.5;
+color: #0b0500;
 }
 
 .article-text {
@@ -158,8 +160,14 @@ background-color:#ea8d50 ;
 
 .events-item {
   min-width: 0;
+
+}
+
+.icon-chevron-right{
+  color: #0b0500;
 }
 }
+
 @media screen and (min-width: 768px) {
   .events-image img {
     width: 340px;
@@ -169,6 +177,7 @@ background-color:#ea8d50 ;
     width: 560px;
   }
 }
+
 
 @media screen and (min-width: 1440px) {
   .events-title {

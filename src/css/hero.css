@@ -1,190 +1,144 @@
 @media screen and (min-width: 375px) {
-  .hero-section {
-    padding-bottom: 32px;
-  }
+
+.hero-section {
+  padding-bottom: 32px;
+}
 
 
 .hero-swiper-slide {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  
 }
-.book1{
+
+.book1 {
   background-image: url('/img/hero-mob-1x.jpg');
 }
 
-@media screen and (max-width: 767px) {
-  .section {
-    background-image: url('/img/hero-mob-1x.jpg');
-  }
-}
-
-
-@media screen and (max-width: 767px) and (min-resolution: 192dpi) {
-  .section {
-    background-image: url('/img/hero-mob-2x.jpg');
-  }
-}
-
-
-@media screen and (min-width: 768px) and (max-width: 1439px) {
-  .section {
-    background-image: url('/img/hero-tabl-1x.jpg');
-  }
-}
-
-
-@media screen and (min-width: 768px) and (max-width: 1439px) and (min-resolution: 192dpi) {
-  .section {
-    background-image: url('/img/hero-tabl-2x.jpg');
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .section {
-    background-image: url('/img/hero-desk-1x.jpg');
-  }
-}
-
-
-@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
-  .section {
-    background-image: url('/img/hero-desk-2x.jpg');
-  }
-}
-
-.book2{
+.book2 {
   background-image: url('/img/slide-mob-2-1x.jpg');
 }
 
-@media screen and (max-width: 767px) {
-  .section {
-    background-image: url('/img/slide-mob-2-1x.jpg');
-  }
-}
-
-
-@media screen and (max-width: 767px) and (min-resolution: 192dpi) {
-  .section {
-    background-image: url('/img/slide-mob-2-2x.jpg');
-  }
-}
-
-
-@media screen and (min-width: 768px) and (max-width: 1439px) {
-  .section {
-    background-image: url('/img/slide-tabl-2-1x.jpg');
-  }
-}
-
-
-@media screen and (min-width: 768px) and (max-width: 1439px) and (min-resolution: 192dpi) {
-  .section {
-    background-image: url('/img/slide-tabl-2-2x.jpg');
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .section {
-    background-image: url('/img/slide-desk-2-1x.jpg');
-  }
-}
-
-
-@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
-  .section {
-    background-image: url('/img/slide-desk-2-2x.jpg');
-  }
-}
-
-.book3{
+.book3 {
   background-image: url('/img/slide-mob-3-1x.jpg');
 }
 
-@media screen and (max-width: 767px) {
-  .section {
-    background-image: url('/img/slide-mob-3-1x.jpg');
-  }
-}
 
-
-@media screen and (max-width: 767px) and (min-resolution: 192dpi) {
-  .section {
-    background-image: url('/img/slide-mob-3-2x.jpg');
-  }
-}
-
-
-@media screen and (min-width: 768px) and (max-width: 1439px) {
-  .section {
-    background-image: url('/img/slide-tabl-3-1x.jpg');
-  }
-}
-
-
-@media screen and (min-width: 768px) and (max-width: 1439px) and (min-resolution: 192dpi) {
-  .section {
-    background-image: url('/img/slide-tabl-3-2x.jpg');
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .section {
-    background-image: url('/img/slide-desk-3-1x.jpg');
-  }
-}
-
-
-@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
-  .section {
-    background-image: url('/img/slide-desk-3-2x.jpg');
-  }
-}
-
-
-
-
- .book4{
+.book4 {
   background-image: url('/img/slide-mob-4-1x.jpg');
 }
 
+/* Мобільні пристрої */
 @media screen and (max-width: 767px) {
-  .section {
+  .book1 {
+    background-image: url('/img/hero-mob-1x.jpg');
+  }
+
+  .book2 {
+    background-image: url('/img/slide-mob-2-1x.jpg');
+  }
+
+  .book3 {
+    background-image: url('/img/slide-mob-3-1x.jpg');
+  }
+
+  .book4 {
     background-image: url('/img/slide-mob-4-1x.jpg');
   }
 }
 
-
+/* Мобільні пристрої з високою роздільною здатністю (2x) */
 @media screen and (max-width: 767px) and (min-resolution: 192dpi) {
-  .section {
+  .book1 {
+    background-image: url('/img/hero-mob-2x.jpg');
+  }
+
+  .book2 {
+    background-image: url('/img/slide-mob-2-2x.jpg');
+  }
+
+  .book3 {
+    background-image: url('/img/slide-mob-3-2x.jpg');
+  }
+
+  .book4 {
     background-image: url('/img/slide-mob-4-2x.jpg');
   }
 }
 
-
+/* Планшетні пристрої (1x) */
 @media screen and (min-width: 768px) and (max-width: 1439px) {
-  .section {
+  .book1 {
+    background-image: url('/img/hero-tabl-1x.jpg');
+  }
+
+  .book2 {
+    background-image: url('/img/slide-tabl-2-1x.jpg');
+  }
+
+  .book3 {
+    background-image: url('/img/slide-tabl-3-1x.jpg');
+  }
+
+  .book4 {
     background-image: url('/img/slide-tabl-4-1x.jpg');
   }
 }
 
-
+/* Планшетні пристрої з високою роздільною здатністю (2x) */
 @media screen and (min-width: 768px) and (max-width: 1439px) and (min-resolution: 192dpi) {
-  .section {
+  .book1 {
+    background-image: url('/img/hero-tabl-2x.jpg');
+  }
+
+  .book2 {
+    background-image: url('/img/slide-tabl-2-2x.jpg');
+  }
+
+  .book3 {
+    background-image: url('/img/slide-tabl-3-2x.jpg');
+  }
+
+  .book4 {
     background-image: url('/img/slide-tabl-4-2x.jpg');
   }
 }
 
+/* Десктопні пристрої (1x) */
 @media screen and (min-width: 1440px) {
-  .section {
+  .book1 {
+    background-image: url('/img/hero-desk-1x.jpg');
+  }
+
+  .book2 {
+    background-image: url('/img/slide-desk-2-1x.jpg');
+  }
+
+  .book3 {
+    background-image: url('/img/slide-desk-3-1x.jpg');
+  }
+
+  .book4 {
     background-image: url('/img/slide-desk-4-1x.jpg');
   }
 }
 
-
+/* Десктопні пристрої з високою роздільною здатністю (2x) */
 @media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
-  .section {
+  .book1 {
+    background-image: url('/img/hero-desk-2x.jpg');
+  }
+
+  .book2 {
+    background-image: url('/img/slide-desk-2-2x.jpg');
+  }
+
+  .book3 {
+    background-image: url('/img/slide-desk-3-2x.jpg');
+  }
+
+  .book4 {
     background-image: url('/img/slide-desk-4-2x.jpg');
   }
 }
@@ -209,8 +163,8 @@
     padding-left: 16px;
     padding-bottom: 16px;
     flex-shrink: 0;
-    min-width: 344px;
-    min-height: 199px;
+    width: 343px;
+    height: 199px;
     border-radius: 16px;
     background-size: cover;
     background-position: center;
@@ -344,7 +298,7 @@
   .hero-swiper-slide {
     padding-left: 56px;
     padding-bottom: 56px;
-    min-width: 1313px;
+    min-width: 100%;
     min-height: 513px;
   }
   .hero-discount {
