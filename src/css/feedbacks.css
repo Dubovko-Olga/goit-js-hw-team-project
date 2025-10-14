@@ -136,10 +136,9 @@
     place-items: center;
     width: 48px;
     height: 48px;
-
-    background: var(--fb-accent);
+   background-color: #f46036;
     color: #fff;
-    border: none;
+   border: 1px solid rgba(11, 5, 0, 0.15);
     border-radius: 0;
     cursor: pointer;
     line-height: 0;
@@ -147,6 +146,10 @@
     -webkit-tap-highlight-color: transparent;
     transition: transform 0.15s ease, opacity 0.15s ease;
   }
+  .feedbacks__btn:hover,
+   .feedbacks__btn:focus{
+    background-color:#ea8d50 ;
+  }  
 
   .feedbacks__btn:hover {
     transform: translateY(-1px);
@@ -155,7 +158,8 @@
     transform: translateY(0);
   }
   .feedbacks__btn.is-disabled {
-    opacity: 0.4;
+     background-color: #e15d05;
+     opacity: 0.2;
     pointer-events: none;
   }
 

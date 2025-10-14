@@ -138,15 +138,23 @@
 .events-swiper-btn-next {
   width: 48px;
   height: 48px;
-  background-color: #e15d05;
-  border: none;
+ background-color: #f46036;
+ border: 1px solid rgba(11, 5, 0, 0.15);
 }
 .events-swiper-btn-prev,
 .events-swiper-btn-next:hover,
 .events-swiper-btn-prev,
 .events-swiper-btn-next:focus{
-background-color:#ea8d50;
+background-color:#ea8d50 ;
 }
+
+  .events-swiper-btn-prev.disabled,
+  .events-swiper-btn-prev.disabled {
+    background-color: #e15d05;
+    opacity: 0.2;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 .events-list {
   list-style: none;
   padding: 0;
