@@ -107,7 +107,7 @@
   }
   .hero-swiper-navigation {
     display: flex;
-    gap: 24px;
+    gap: 16px;
     margin-top: 24px;
     order: -1;
     align-items: flex-end;
