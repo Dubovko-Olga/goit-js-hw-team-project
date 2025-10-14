@@ -1,3 +1,4 @@
+@media screen and (min-width: 375px) {
 .header {
   background-color: #fceee6;
   width: 100%;
@@ -96,7 +97,7 @@
   font-weight: 500;
   font-size: 18px;
 }
-
+}
 @media (min-width: 768px) {
   .header-container {
     padding: 16px 24px;

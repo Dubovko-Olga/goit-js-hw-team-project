@@ -1,3 +1,4 @@
+@media screen and (min-width: 375px) {
 #iziToast-wrapper {
   position: fixed !important;
   z-index: 999999 !important;
@@ -284,6 +285,7 @@ body.modal-open {
   box-sizing: content-box;
   flex-shrink: 0;
   cursor: pointer;
+}
 }
 @media (min-width: 768px) {
   .modal-overlay {

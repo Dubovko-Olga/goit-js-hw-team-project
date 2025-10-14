@@ -1,3 +1,4 @@
+@media screen and (min-width: 375px) {
 body,
 .container {
   background-color: #fceee6;
@@ -212,7 +213,7 @@ button:focus {
   line-height: 1.5;
   color: #0b0500;
 }
-
+}
 @media (min-width: 768px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);

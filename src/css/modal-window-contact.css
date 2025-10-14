@@ -93,7 +93,8 @@ body.no-scroll {
   margin-bottom: 24px;
 }
 
-.modal-form input {
+@media screen and (min-width: 375px) {
+  .modal-form input {
   font-family: inherit;
   font-weight: 400;
   font-size: 16px;
@@ -200,7 +201,7 @@ body.no-scroll {
   background: var(--color-hover-btn);
   transform: scale(0.98);
 }
-
+}
 /* Media Queries */
 
 /* Mobile-adaptive 375px+ */
