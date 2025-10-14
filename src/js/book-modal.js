@@ -22,26 +22,21 @@ let quantity = 1;
 let modalAccordion = null;
 
 function openModal(book) {
-  // Сбрасываем количество
   quantity = 1;
   countEl.textContent = quantity;
 
-  // Заполняем данные книги
   modalImg.src = book.book_image;
   modalTitle.textContent = book.title;
   modalAuthor.textContent = `by ${book.author}`;
   modalPrice.textContent = `$${book.price === '0.00' ? '10.00' : book.price}`;
   modalDesc.textContent = book.description || 'No description available.';
 
-  // Открываем модалку
   modalOverlay.classList.remove('hidden');
   Arrow.classList.remove('is-visible');
   document.body.classList.add('modal-open');
 
-  // ✅ Вешаем слушатель Escape при открытии
   document.addEventListener('keydown', onEscKeyPress);
 
-  // Инициализация аккордеона (только один раз)
   if (!modalAccordion) {
     modalAccordion = new Accordion(
       modalOverlay.querySelector('.accordion-container'),
@@ -54,31 +49,26 @@ function openModal(book) {
   }
 }
 
-// === Закрити модалку ===
 function closeModal() {
   modalOverlay.classList.add('hidden');
   document.body.classList.remove('modal-open');
   Arrow?.classList.add('is-visible');
 
-  // ✅ Знімаємо слухач клавіатури
   document.removeEventListener('keydown', onEscKeyPress);
 }
 
-// === Обробник натискання Escape ===
 function onEscKeyPress(e) {
   if (e.key === 'Escape') {
     closeModal();
   }
 }
 
-// === Слухачі подій ===
 modalClose.addEventListener('click', closeModal);
 
 modalOverlay.addEventListener('click', e => {
-  if (e.target === modalOverlay) closeModal(); // ✅ клік по backdrop
+  if (e.target === modalOverlay) closeModal();
 });
 
-// Управление количеством
 plusBtn.addEventListener('click', () => {
   quantity++;
   countEl.textContent = quantity;
@@ -91,7 +81,6 @@ minusBtn.addEventListener('click', () => {
   }
 });
 
-// Кнопки Learn More
 export function addLearnMoreListeners() {
   const buttons = document.querySelectorAll('.learn-more');
 
