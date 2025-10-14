@@ -32,7 +32,7 @@ function openModal(book) {
   modalDesc.textContent = book.description || 'No description available.';
 
   modalOverlay.classList.remove('hidden');
-  Arrow.classList.remove('is-visible');
+
   document.body.classList.add('modal-open');
 
   document.addEventListener('keydown', onEscKeyPress);
@@ -52,7 +52,6 @@ function openModal(book) {
 function closeModal() {
   modalOverlay.classList.add('hidden');
   document.body.classList.remove('modal-open');
-  Arrow?.classList.add('is-visible');
 
   document.removeEventListener('keydown', onEscKeyPress);
 }
