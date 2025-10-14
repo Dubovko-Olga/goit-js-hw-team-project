@@ -1,3 +1,4 @@
+// feedbacks.js
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -27,32 +28,34 @@ export function initFeedbacks() {
   const nextBtn = section.querySelector('.feedbacks__btn--next');
   const paginationEl = section.querySelector('.feedbacks__pagination');
 
-  const sw = new Swiper(root, {
+  const swiper = new Swiper(root, {
     modules: [Navigation, Pagination, A11y, Keyboard],
+
+    speed: 450,
+    spaceBetween: 24,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    autoHeight: true,
 
     observer: true,
     observeParents: true,
     observeSlideChildren: true,
 
-    speed: 450,
-    spaceBetween: 24,
-
-    breakpointsBase: 'window',
-    slidesPerView: 1,
-    slidesPerGroup: 1,
 
     breakpoints: {
-      768: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 24,
-      },
-      1280: {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-        spaceBetween: 24,
-      },
+      768:  { slidesPerView: 2, slidesPerGroup: 2, spaceBetween: 24 },
+      1440: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 24 },
     },
+
+
+    pagination: {
+      el: paginationEl,
+      clickable: true,
+      bulletElement: 'button',
+      renderBullet: (i, className) =>
+        `<button type="button" class="${className}" aria-label="Go to slide ${i + 1}"></button>`,
+    },
+
 
     navigation: {
       prevEl: prevBtn,
@@ -60,54 +63,21 @@ export function initFeedbacks() {
       disabledClass: 'is-disabled',
     },
 
-    pagination: {
-      el: paginationEl,
-      clickable: true,
-    },
-
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true,
-    },
-
-    a11y: {
-      enabled: true,
-      slideRole: 'listitem',
-    },
+    keyboard: { enabled: true, onlyInViewport: true },
+    a11y: { enabled: true },
 
     on: {
-      init(s) {
-        updateNav(s, prevBtn, nextBtn);
-      },
-      slideChange(s) {
-        updateNav(s, prevBtn, nextBtn);
-      },
+      afterInit(s) { updateNav(s, prevBtn, nextBtn); },
+      slideChange(s) { updateNav(s, prevBtn, nextBtn); },
       resize(s) {
-        updateNav(s, prevBtn, nextBtn);
-      },
-      reachBeginning(s) {
-        updateNav(s, prevBtn, nextBtn);
-      },
-      reachEnd(s) {
+        s.updateAutoHeight(200);
         updateNav(s, prevBtn, nextBtn);
       },
     },
   });
 
+  queueMicrotask(() => swiper.update());
+  window.addEventListener('load', () => swiper.update());
 
-  setTimeout(() => sw.update(), 0);
-  window.addEventListener('load', () => sw.update());
+  return swiper;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

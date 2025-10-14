@@ -2,6 +2,9 @@ body,
 .container {
   background-color: #fceee6;
 }
+button:focus {
+  outline: none;
+}
 .load-more {
   border: 1px solid #e15d05;
   border-radius: 4px;
@@ -171,6 +174,14 @@ body,
   transition: color, background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.load-more:hover {
+  background-color: #0b0500;
+  color: #fff;
+}
+.learn-more:hover {
+  background-color: #ea8d50;
+  color: #0b0500;
+}
 .left-panel {
   display: flex;
   flex-direction: column;
@@ -303,14 +314,7 @@ body,
     color: orange;
     cursor: pointer;
   }
-  .load-more:hover {
-    background-color: #0b0500;
-    color: #fff;
-  }
-  .learn-more:hover {
-    background-color: #ea8d50;
-    color: #0b0500;
-  }
+
   .select-wrapper {
     display: none;
   }

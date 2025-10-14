@@ -1,0 +1,235 @@
+/*  ===Contact Modal===  */
+:root {
+  --opacity-neutral-darkest-25: rgba(0, 0, 0, 0.25);
+  --opacity-neutral-darkest-15: rgba(0, 0, 0, 0.15);
+  --opacity-neutral-darkest-5: rgba(0, 0, 0, 0.05);
+  --opacity-neutral-darkest-60: rgba(0, 0, 0, 0.6);
+
+  --color-orange-btn: #e15d05; /* основний колір кнопки */
+  --color-hover-btn: #c94f04; /* відтінок для hover */
+  --color-black: #0b0500;
+  --color-error-message: #d32f2f;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Backdrop */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: var(--opacity-neutral-darkest-25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 16px;
+  z-index: 1000;
+  pointer-events: none;
+  display: none;
+}
+
+.backdrop.is-open {
+  display: flex;
+  pointer-events: auto;
+}
+
+/* Modal */
+.modal {
+  background-color: #fceee6;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 320px;
+  padding: 64px 16px;
+  box-shadow: 0 8px 24px var(--opacity-neutral-darkest-15);
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Titles */
+.modal-title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: var(--color-black);
+  margin-bottom: 16px;
+}
+
+.event-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: var(--color-black);
+}
+
+/* Form */
+.modal-form label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-black);
+  margin-bottom: 24px;
+}
+
+.modal-form input {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-black);
+  width: 100%;
+  height: 40px;
+  padding: 8px 12px;
+  border: 1px solid var(--opacity-neutral-darkest-15);
+  border-radius: 4px;
+  background-color: var(--opacity-neutral-darkest-5);
+  outline: none;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.modal-form textarea {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #0b0500;
+  width: 100%;
+  min-height: 120px;
+  resize: vertical;
+  padding: 12px;
+  border: 1px solid var(--opacity-neutral-darkest-15);
+  border-radius: 4px;
+  background-color: var(--opacity-neutral-darkest-5);
+  outline: none;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.modal-form input::placeholder,
+.modal-form textarea::placeholder {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--opacity-neutral-darkest-60);
+  transition: color 0.3s;
+}
+
+.modal-form input::placeholder:focus {
+  color: transparent;
+}
+
+/* Hover & focus  */
+.modal-form input:focus::placeholder,
+.modal-form textarea:focus::placeholder {
+  color: transparent;
+}
+
+/* Active */
+.modal-form textarea:active {
+  border-color: var(--opacity-neutral-darkest-60);
+}
+
+/* Error state */
+.modal-form input.error,
+.modal-form textarea.error {
+  border-color: var(--color-error-message);
+  color: var(--color-error-message);
+}
+
+.modal-form input.error::placeholder,
+.modal-form textarea.error::placeholder {
+  color: var(--color-error-message);
+  opacity: 1;
+}
+
+.error-text {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-error-message);
+  min-height: 20px;
+  margin-top: 4px;
+}
+
+.modal-form button {
+  display: block;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #fff;
+  background-color: var(--color-orange-btn);
+  border: none;
+  border-radius: 8px;
+  padding: 14px 24px;
+  width: 100%;
+  max-width: 342px;
+  height: 48px;
+  box-shadow: 0 4px 10px rgba(225, 93, 5, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-form button:hover,
+.modal-form button:focus {
+  background-color: var(--color-hover-btn);
+  transform: translateY(-1px);
+}
+
+.modal-form button:active {
+  background: var(--color-hover-btn);
+  transform: scale(0.98);
+}
+
+/* Media Queries */
+
+/* Mobile-adaptive 375px+ */
+@media screen and (min-width: 375px) {
+  .modal {
+    max-width: 360px;
+  }
+}
+
+/* Tablet 768px+ */
+@media screen and (min-width: 768px) {
+  .backdrop {
+    padding: 64px 32px;
+  }
+
+  .modal {
+    max-width: 704px;
+    padding: 64px 32px;
+  }
+}
+
+/* Desktop 1440px+ */
+@media screen and (min-width: 1440px) {
+  .backdrop {
+    padding: 64px 0px;
+  }
+
+  .modal {
+    max-width: 866px;
+    padding: 64px;
+  }
+}
