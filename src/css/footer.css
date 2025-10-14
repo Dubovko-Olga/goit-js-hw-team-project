@@ -1,0 +1,256 @@
+/* ====== FOOTER (Mobile First) ====== */
+.footer {
+    background-color: #EA8D50;
+}
+
+.footer .container {
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 80px 16px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* ====== Logo ====== */
+.logo-navigation-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-icon {
+    fill: #fff;
+}
+
+/* ====== Navigation ====== */
+.navigation-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.navigation-link {
+    color: #0B0500;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.navigation-link:hover,
+.navigation-link:focus {
+    color: #ffce00;  /*переглянути колір та змінити*/
+}
+
+/* ====== Sign Up Section ====== */
+.sign-up-container {
+    text-align: center;
+}
+
+.sign-up-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    color: #0B0500;
+    text-align: left;
+}
+
+.sign-up-form {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.footer-input {
+    width: 221px;
+    height: 48px;
+    padding: 12px;
+    border: 1px solid #0B050026;
+    border-radius: 8px;
+    background-color: #0B05000D;
+    color: #0B050099;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.footer-input::placeholder {
+    color: #0B050099;
+}
+
+.signup-button {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.footer-input:focus {
+    border-color: #0B050099;
+}
+
+.footer-button {
+    width: 106px;
+    height: 48px;
+    background-color: #EA8D50;
+    color: #0B0500;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: 1px solid #0B0500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+
+.footer-button:hover {
+    background-color: #0B050099;
+    transform: translateY(-2px);
+}
+
+.sign-up-container p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #0B0500;
+    text-align: left;
+}
+
+/* ====== Copyright ====== */
+.footer-copyright {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #FFFFFF;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+.footer-copyright-text {
+    font-size: 14px;
+    font-weight: 400;
+    color: #0B0500;
+}
+
+/* === min-width: 375px (mobile adaptive start) === */
+@media (min-width: 375px) {
+    .sign-up-container {
+        max-width: 340px;
+    }
+}
+
+/* === min-width: 768px === */
+@media (min-width: 768px) {
+    .footer .container{
+    max-width: 640px;
+    padding: 80px 64px;
+    }
+    
+    .logo-navigation-container{
+        gap: 32px;
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .footer-logo-container {
+        justify-content: center;
+    
+    }
+    
+    .navigation-container {
+        justify-content: center;
+    }
+
+    .navigation {
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+    }
+
+        .sign-up-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .sign-up-form {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer-input {
+        width: 278px;
+        height: 48px;
+
+        border-radius: 4px;
+    }
+
+    .footer-button {
+        flex-shrink: 0;
+    }
+
+}
+
+/* === min-width: 1440px (desktop) === */
+@media (min-width: 1440px) {
+    .footer .container {
+        max-width: 1312px;
+        padding: 80px 64px;
+    }
+    
+    .logo-navigation-container {
+        flex-direction: column;
+        flex: 1;
+        text-align: left;
+        justify-content: left;
+        align-items: flex-start;
+    }
+    
+    .navigation {
+        flex-direction: row;
+    }
+    
+    .sign-up-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex: 0 0 auto;
+    }
+}
