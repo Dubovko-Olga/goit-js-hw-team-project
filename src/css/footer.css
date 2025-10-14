@@ -66,7 +66,7 @@
 
   .navigation-link:hover,
   .navigation-link:focus {
-    color: #ffce00; /*переглянути колір та змінити*/
+  color: #5a2502;
   }
 
   /* ====== Sign Up Section ====== */
@@ -81,6 +81,7 @@
     line-height: 1.5;
     color: #0b0500;
     text-align: left;
+    font-weight: bold;
   }
 
   .sign-up-form {
@@ -127,8 +128,7 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
 
-  .footer-button:hover,
-  .footer-button:focus {
+  .footer-button:hover {
     background-color: #b44a04;
     transform: translateY(-2px);
   }

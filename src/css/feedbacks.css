@@ -56,8 +56,8 @@
   }
 
   .feedbacks__card {
-    border: 1px solid var(--fb-border);
-    border-radius: var(--fb-radius);
+   border: 1px solid rgba(11, 5, 0, 0.15);
+    border-radius: 16px;
     padding: 40px;
 
     display: flex;
@@ -146,8 +146,7 @@
     -webkit-tap-highlight-color: transparent;
     transition: transform 0.15s ease, opacity 0.15s ease;
   }
-  .feedbacks__btn:hover,
-   .feedbacks__btn:focus{
+  .feedbacks__btn:hover{
     background-color:#ea8d50 ;
   }  
 

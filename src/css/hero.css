@@ -3,7 +3,6 @@
     padding-bottom: 32px;
   }
 
-
   .book1 {
     background-image: url(/img/hero-tabl-1x.jpg);
   }
@@ -43,21 +42,21 @@
       background-image: url(/img/slide-tabl-4-2x.jpg);
     }
   }
-   .hero-swiper {
+  .hero-swiper {
     overflow: hidden;
     max-width: 100%;
     align-items: center;
     justify-content: space-between;
   }
 
-   .hero-swiper-wrapper {
+  .hero-swiper-wrapper {
     display: flex;
     padding: 0;
     margin: 0;
     list-style: none;
     transition: transform 0.3s ease;
   }
-   .hero-swiper-slide {
+  .hero-swiper-slide {
     padding-left: 16px;
     padding-bottom: 16px;
     flex-shrink: 0;
@@ -71,7 +70,6 @@
     justify-content: flex-end;
     color: #fff;
     background-repeat: no-repeat;
-   
   }
   .hero-discount {
     flex-wrap: wrap;
@@ -99,8 +97,8 @@
     transition: transform 0.3s ease;
   }
   .shop-btn:hover,
-  .shop-btn:focus{
-    background-color:#ea8d50 ;
+  .shop-btn:focus {
+    background-color: #ea8d50;
   }
   .hero-deck {
     display: flex;
@@ -138,11 +136,9 @@
     justify-content: center;
     transition: transform 0.3s ease;
   }
-    .hero-btn-left:hover,
-    .hero-btn-left:focus,
-  .hero-btn-right:hover,
- .hero-btn-right:focus {
-background-color:#ea8d50 ;
+  .hero-btn-left,
+  .hero-btn-right:hover {
+    background-color: #ea8d50;
   }
   .hero-btn-left.disabled,
   .hero-btn-right.disabled {
@@ -157,7 +153,6 @@ background-color:#ea8d50 ;
   }
 }
 @media only screen and (min-width: 768px) {
-
   .hero-swiper-slide {
     padding-left: 40px;
     padding-bottom: 32px;
@@ -193,7 +188,7 @@ background-color:#ea8d50 ;
   }
 }
 @media only screen and (min-width: 1440px) {
-    .hero-section {
+  .hero-section {
     border: 1px solid #000;
     padding-bottom: 32px;
   }

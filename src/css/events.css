@@ -11,9 +11,6 @@
   margin-bottom: 32px;
 }
 
-.swiper-slide {
-  border: none;
-}
 
 .swiper {
   padding-bottom: 0;
@@ -142,9 +139,7 @@
  border: 1px solid rgba(11, 5, 0, 0.15);
 }
 .events-swiper-btn-prev,
-.events-swiper-btn-next:hover,
-.events-swiper-btn-prev,
-.events-swiper-btn-next:focus{
+.events-swiper-btn-next:hover{
 background-color:#ea8d50 ;
 }
 
