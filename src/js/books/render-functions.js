@@ -189,12 +189,14 @@ window.addEventListener('resize', () => {
 });
 
 function smoothScroll() {
-  const { height } = document
-    .querySelector('.gallery-item')
-    .getBoundingClientRect();
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  if (!galleryItems.length) return;
+
+  const lastItem = galleryItems[galleryItems.length - 1];
+  const lastItemHeight = lastItem.getBoundingClientRect().height;
 
   window.scrollBy({
-    top: height * 2,
+    top: lastItemHeight + 16,
     behavior: 'smooth',
   });
 }
