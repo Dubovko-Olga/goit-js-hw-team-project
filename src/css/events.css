@@ -1,11 +1,7 @@
 .section {
   padding: 32px 0;
 }
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0;
-}
+
 .section-name {
   margin-bottom: 15px;
 }
@@ -123,7 +119,7 @@
   background-color: #010101;
 }
 
-.svg {
+.events-icon {
   fill: white;
 }
 
@@ -173,11 +169,7 @@
   .events-image img {
     width: 421px;
   }
-  .container {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 0;
-  }
+ 
   .events-controls-wrapper {
     display: none;
   }
