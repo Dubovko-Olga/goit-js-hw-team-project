@@ -106,7 +106,7 @@ addToCart.addEventListener('click', () => {
 
 buyNow.addEventListener('click', () => {
   iziToast.success({
-    message: `You bought ${quantity} book${quantity > 1 ? 's' : ''}`,
+    message: `Thank you for your purchase`,
     position: 'topRight',
   });
   closeModal();
