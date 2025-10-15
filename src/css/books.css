@@ -67,7 +67,7 @@
     font-size: 14px;
     line-height: 1.5;
     color: #0b0500;
-    background-color: #fceee6;
+    background-color: rgba(11, 5, 0, 0.15);
     padding: 12px 8px 12px 8px;
   }
   .category-select::-webkit-scrollbar-track {
@@ -85,7 +85,7 @@
 
   option:checked {
     border: 1px solid rgba(11, 5, 0, 0.15);
-    background-color: rgba(11, 5, 0, 0.05);
+    background-color: rgba(11, 5, 0, 0.2);
   }
 
   .select-wrapper {
