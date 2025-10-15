@@ -59,13 +59,11 @@
    border: 1px solid rgba(11, 5, 0, 0.15);
     border-radius: 16px;
     padding: 40px;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    min-height: 170px;
-    height: auto;
+    min-height: 217px;
+    width: 421px;
     background: transparent;
   }
 
