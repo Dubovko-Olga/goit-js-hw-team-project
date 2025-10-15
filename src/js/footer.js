@@ -3,7 +3,7 @@ const form = document.querySelector('.sign-up-form');
 const input = document.querySelector('.footer-input');
 
 // Обробник відправки форми
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', e => {
   // Якщо поле порожнє або не відповідає паттерну
   if (!input.value.trim() || !input.checkValidity()) {
     e.preventDefault(); // не відправляти форму
@@ -22,10 +22,6 @@ input.addEventListener('blur', () => {
   }
 });
 
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const emailInput = document.querySelector('.footer-input');
   const signUpButton = document.querySelector('.footer-button');
@@ -34,35 +30,31 @@ document.addEventListener('DOMContentLoaded', () => {
   // Перевірка введеного email
   function validateEmail() {
     const emailValue = emailInput.value.trim();
-    const emailPattern = new RegExp(emailInput.pattern); // регулярний вираз з HTML
+    const emailPattern = new RegExp(emailInput.pattern);
     const isValid = emailPattern.test(emailValue);
 
     if (isValid) {
       signUpButton.removeAttribute('disabled');
-      signUpButton.style.backgroundColor = '#EA8D50'; // встановлюємо колір кнопки активної
+      signUpButton.style.backgroundColor = '#EA8D50';
     } else {
       signUpButton.setAttribute('disabled', 'true');
-      signUpButton.style.backgroundColor = '#EA8D50'; // сірий колір, коли кнопка не активна
+      signUpButton.style.backgroundColor = '#EA8D50';
     }
   }
 
-  // Подія на введення тексту в поле email
   emailInput.addEventListener('input', validateEmail);
 
-  // Подія на відправку форми
   signUpForm.addEventListener('submit', function (event) {
-    event.preventDefault(); // зупиняє стандартну відправку форми
+    event.preventDefault();
 
-    // Перевіряємо ще раз, чи правильний email перед відправкою
     if (emailInput.checkValidity()) {
       alert('Thank you for signing up!');
-      // Тут можна додати реальну логіку для відправки на сервер
-      emailInput.value = ''; // очищаємо поле після відправки
+
+      emailInput.value = '';
     } else {
       alert('Please enter a valid email address.');
     }
   });
 
-  // Ініціалізація
-  validateEmail(); // Перевіряємо email при завантаженні сторінки, щоб кнопка була вимкнена за замовчуванням
+  validateEmail();
 });
