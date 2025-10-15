@@ -47,9 +47,8 @@
     border: 1px solid rgba(11, 5, 0, 0.15);
     border-radius: 4px;
     padding: 8px 12px;
-    width: 342px; /* ширина самого селекта */
+    width: 342px;
     max-width: 100%;
-
     background-color: rgba(11, 5, 0, 0.05);
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
@@ -68,13 +67,30 @@
     font-size: 14px;
     line-height: 1.5;
     color: #0b0500;
+    background-color: rgba(11, 5, 0, 0.15);
+    padding: 12px 8px 12px 8px;
+  }
+  .category-select::-webkit-scrollbar-track {
+    background: rgba(11, 5, 0, 0.15);
+  }
+
+  ::checkmark {
+    display: none;
+  }
+
+  :picker(select) {
+    border-radius: 4px;
+    border: 1px solid rgba(11, 5, 0, 0.15);
+  }
+
+  option:checked {
+    border: 1px solid rgba(11, 5, 0, 0.15);
+    background-color: rgba(11, 5, 0, 0.2);
   }
 
   .select-wrapper {
     position: relative;
     display: inline-block;
-    width: 100%;
-    max-width: 342px;
   }
 
   .select-wrapper::before {
@@ -229,6 +245,9 @@
   }
 
   .select-wrapper {
+    width: 249px;
+  }
+  :picker(select) {
     width: 249px;
   }
 
