@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
       signUpButton.style.backgroundColor = '#EA8D50'; // встановлюємо колір кнопки активної
     } else {
       signUpButton.setAttribute('disabled', 'true');
-      signUpButton.style.backgroundColor = '#ccc'; // сірий колір, коли кнопка не активна
+      signUpButton.style.backgroundColor = '#EA8D50'; // сірий колір, коли кнопка не активна
     }
   }
 
