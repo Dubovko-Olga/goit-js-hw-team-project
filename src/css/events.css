@@ -4,18 +4,33 @@
 }
 
 .section-name {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
+font-weight: 600;
+font-size: 16px;
+line-height: 1.5;
+text-transform: capitalize;
+color: #0b0500;
 }
 
 .events-text {
   margin-bottom: 32px;
+font-size: 18px; 
+line-height: 1.5;
+color: #0b0500;
 }
 
 
 .swiper {
   padding-bottom: 0;
 }
-
+.events-title{
+font-weight: 600;
+font-size: 36px;
+line-height: 1.2;
+letter-spacing: -0.01em;
+color: #0b0500;
+margin-bottom: 16px;
+}
 .events-image img {
   border-radius: 16px;
   width: 342px;
@@ -34,14 +49,21 @@
 .events-description {
   font-size: 24px;
   line-height: 1.4;
+letter-spacing: -0.01em;
+color: #0b0500;
 }
 
 .event-meta {
   display: flex;
   align-items: center;
   margin-bottom: 8px;
-}
 
+}
+.event-time{
+font-size: 16px;
+line-height: 1.5;
+color: #0b0500;
+}
 .event-location {
   font-size: 16px;
 }

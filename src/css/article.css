@@ -14,7 +14,7 @@
 .article-content {
   flex: 1 1 50%;
   width: 343px;
-  
+  margin-bottom: 32px;
 }
 
 .article-image-wrapper {
@@ -25,7 +25,7 @@
 .article-image{
    width: 343px;
    height: 248px;
-   margin-top: 32px;
+   
 }
 
 .article-title {
