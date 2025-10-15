@@ -1,6 +1,10 @@
 body.modal-open .scrollup {
   display: none !important;
 }
+select,
+::picker(select) {
+  appearance: base-select;
+}
 h1,
 h2,
 h3,
