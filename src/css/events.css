@@ -168,7 +168,7 @@ background-color:#ea8d50 ;
 }
 
   .events-swiper-btn-prev.disabled,
-  .events-swiper-btn-prev.disabled {
+  .events-swiper-btn-next.disabled {
     background-color: #e15d05;
     opacity: 0.2;
     cursor: not-allowed;
