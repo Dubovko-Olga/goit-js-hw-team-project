@@ -1,6 +1,6 @@
 /* Feedbacks — variables */
 
-@media screen and (min-width: 375px) {
+
   :root {
     --fb-text: #111;
     --fb-muted: #6b6b6b;
@@ -165,7 +165,7 @@
     fill: currentColor;
     pointer-events: none;
   }
-}
+
 
 /* Breakpoints (тільки паддінги секції) */
 

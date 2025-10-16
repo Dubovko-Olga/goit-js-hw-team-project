@@ -1,4 +1,4 @@
-@media screen and (min-width: 375px) {
+
   .location__container {
     background-color: var(--Color-Scheme-1-Background, #fceee6);
     padding: 64px 16px;
@@ -121,7 +121,7 @@
     border-radius: 8px;
     opacity: 1;
   }
-}
+
 @media (min-width: 768px) {
   .location__container {
     gap: 80px;

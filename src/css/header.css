@@ -1,4 +1,4 @@
-@media screen and (min-width: 375px) {
+
   .header {
     padding: 14px 0;
   }
@@ -105,7 +105,7 @@
   .mobile-nav-link:hover {
     color: #5a2502;
   }
-}
+
 @media (min-width: 768px) {
   .header-container {
     padding: 16px 24px;

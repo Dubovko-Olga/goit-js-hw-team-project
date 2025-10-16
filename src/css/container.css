@@ -1,6 +1,7 @@
 /* Styles for Mobile devices */
 .container {
   width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 16px;
   background-color: #fceee6;
@@ -8,13 +9,14 @@
 
 @media screen and (min-width: 375px) {
   .container {
-    max-width: 375px;
+    max-width: 343px;
+    margin: 0 auto ;
   }
 }
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    max-width: 704px;
     padding: 0 32px;
   }
 
