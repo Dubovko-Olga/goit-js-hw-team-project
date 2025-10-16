@@ -3,15 +3,28 @@ import { glob } from 'glob';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 import SortCss from 'postcss-sort-media-queries';
+import path from 'path'; 
 
 export default defineConfig(({ command }) => {
   return {
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
-    root: 'src', 
+
+    root: 'src',
+
+   
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, './src'),
+      },
+    },
+
     build: {
       sourcemap: true,
+      outDir: '../dist',
+      emptyOutDir: true,
+
       rollupOptions: {
         input: glob.sync('./src/*.html'),
         output: {
@@ -34,9 +47,8 @@ export default defineConfig(({ command }) => {
           },
         },
       },
-      outDir: '../dist', 
-      emptyOutDir: true,
     },
+
     plugins: [
       injectHTML(),
       FullReload(['./src/**/**.html']),
