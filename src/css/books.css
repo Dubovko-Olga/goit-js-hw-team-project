@@ -274,7 +274,7 @@ option:checked {
   .books-container {
     display: grid;
     grid-template-columns: 308px 1fr;
-    gap: 24px;
+    column-gap: 24px;
   }
 
   .content-wrapper {
