@@ -14,7 +14,7 @@ function openModal(eventName) {
     <div class="modal">
       <button type="button" class="modal-close" aria-label="Close modal">
         <svg width="16" height="16">
-         <use href="/img/icons.svg#icon-close"></use>
+         <use href="./img/icons.svg#icon-close"></use>
         </svg>
       </button>
       <h2 class="modal-title">Register</h2>
