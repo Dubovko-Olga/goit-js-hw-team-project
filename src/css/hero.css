@@ -23,6 +23,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    max-width: 343px;
     height: 100%;
     object-fit: cover;
     border-radius: 16px;
@@ -36,6 +37,7 @@
     padding-bottom: 16px;
     flex-shrink: 0;
     width: 100%;
+    max-width: 343px;
     height: 199px;
     border-radius: 16px;
     background-size: cover;
@@ -105,13 +107,10 @@
     margin-top: 24px;
     flex-wrap: wrap;
     width: 100%;
+    max-width: 343px;
     order: 0;
   }
-  @media only screen and (min-width: 375px){
-    .hero-title{
-      width: 343px ;
-    }
-  }
+
   .hero-btn-left,
   .hero-btn-right {
     background-color: #f46036;
@@ -143,7 +142,7 @@
   .hero-swiper-slide {
     padding-left: 40px;
     padding-bottom: 32px;
-    min-width: 100%;
+    width: 100%;
     min-height: 274px;
     border: none;
   }
@@ -169,7 +168,9 @@
     justify-content: flex-end;
     gap: 24px;
   }
-
+ .hero-title{
+  width: 704px;
+ }
  
 }
 @media only screen and (min-width: 1440px) {
@@ -197,6 +198,7 @@
   .hero-title {
     font-size: 52px;
     margin-top: 24px;
+    width: 1168px;
     flex-wrap: nowrap;
   }
 }
