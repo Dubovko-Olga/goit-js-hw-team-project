@@ -1,184 +1,172 @@
 /* Feedbacks — variables */
 
+:root {
+  --fb-text: #111;
+  --fb-muted: #6b6b6b;
+  --fb-accent: #e2701a;
+  --fb-border: #e6d6ca;
+  --fb-radius: 12px;
+}
 
-  :root {
-    --fb-text: #111;
-    --fb-muted: #6b6b6b;
-    --fb-accent: #e2701a;
-    --fb-border: #e6d6ca;
-    --fb-radius: 12px;
-  }
+.feedbacks {
+  background: transparent;
+  padding: 64px 0;
+}
 
-  .feedbacks {
-    background: transparent;
-    padding: 56px 0;
-  }
+.feedbacks .container {
+  background: transparent;
+}
+.feedbacks__inner {
+  display: block;
+  width: 100%;
+}
 
-  .feedbacks .container {
-    background: transparent;
-  }
-  .feedbacks__inner {
-    display: block;
-    width: 100%;
-  }
+.feedbacks__head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 80px;
+}
 
-  .feedbacks__head {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-    margin-bottom: 80px;
-  }
+.feedbacks__title {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--fb-text);
+  margin: 0;
+}
 
-  .feedbacks__title {
-    font-size: clamp(28px, 4vw, 44px);
-    font-weight: 600;
-    line-height: 1.2;
-    color: var(--fb-text);
-    margin: 0;
-  }
+.feedbacks__subtitle {
+  color: #0b0500;
+  margin: 0;
+}
 
-  .feedbacks__subtitle {
-    color: #0b0500;
-    margin: 0;
-  }
+.feedbacks__swiper {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
 
-  .feedbacks__swiper {
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 32px;
-  }
+.swiper-wrapper {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-  .swiper-wrapper {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+.feedbacks__card {
+  border: 1px solid rgba(11, 5, 0, 0.15);
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 217px;
+  width: 421px;
+  background: transparent;
+}
 
-  .feedbacks__card {
-   border: 1px solid rgba(11, 5, 0, 0.15);
-    border-radius: 16px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 217px;
-    width: 421px;
-    background: transparent;
-  }
+.feedbacks__text {
+  margin: 0 0 18px;
+  color: var(--fb-text);
+}
 
-  .feedbacks__text {
-    margin: 0 0 18px;
-    color: var(--fb-text);
-  }
+.feedbacks__user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
-  .feedbacks__user {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
+.feedbacks__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
 
-  .feedbacks__avatar {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-  }
+.feedbacks__meta {
+  display: flex;
+  flex-direction: column;
+}
+.feedbacks__name {
+  color: var(--fb-text);
+  font-weight: 700;
+}
+.feedbacks__role {
+  color: var(--fb-muted);
+  font-size: 14px;
+}
 
-  .feedbacks__meta {
-    display: flex;
-    flex-direction: column;
-  }
-  .feedbacks__name {
-    color: var(--fb-text);
-    font-weight: 700;
-  }
-  .feedbacks__role {
-    color: var(--fb-muted);
-    font-size: 14px;
-  }
+.feedbacks__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
 
-  .feedbacks__controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-  }
+.feedbacks__pagination {
+  position: static;
+}
 
-  .feedbacks__pagination {
-    position: static;
-  }
+.feedbacks__pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(17, 17, 17, 0.28);
+  opacity: 1;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
 
-  .feedbacks__pagination .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-    border-radius: 999px;
-    background: rgba(17, 17, 17, 0.28);
-    opacity: 1;
-    transition: transform 0.2s ease, background 0.2s ease;
-  }
+.feedbacks__pagination .swiper-pagination-bullet-active {
+  background: #111;
+  transform: scale(1.15);
+}
 
-  .feedbacks__pagination .swiper-pagination-bullet-active {
-    background: #111;
-    transform: scale(1.15);
-  }
+.feedbacks__nav {
+  display: flex;
+  gap: 12px;
+}
 
-  .feedbacks__nav {
-    display: flex;
-    gap: 12px;
-  }
+.feedbacks__btn {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  background-color: #f46036;
+  color: #fff;
+  border: 1px solid rgba(11, 5, 0, 0.15);
+  border-radius: 0;
+  cursor: pointer;
+  line-height: 0;
 
-  .feedbacks__btn {
-    display: grid;
-    place-items: center;
-    width: 48px;
-    height: 48px;
-   background-color: #f46036;
-    color: #fff;
-   border: 1px solid rgba(11, 5, 0, 0.15);
-    border-radius: 0;
-    cursor: pointer;
-    line-height: 0;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+.feedbacks__btn:hover {
+  background-color: #ea8d50;
+}
 
-    -webkit-tap-highlight-color: transparent;
-    transition: transform 0.15s ease, opacity 0.15s ease;
-  }
-  .feedbacks__btn:hover{
-    background-color:#ea8d50 ;
-  }  
+.feedbacks__btn:hover {
+  transform: translateY(-1px);
+}
+.feedbacks__btn:active {
+  transform: translateY(0);
+}
+.feedbacks__btn.is-disabled {
+  background-color: #e15d05;
+  opacity: 0.2;
+  pointer-events: none;
+}
 
-  .feedbacks__btn:hover {
-    transform: translateY(-1px);
-  }
-  .feedbacks__btn:active {
-    transform: translateY(0);
-  }
-  .feedbacks__btn.is-disabled {
-     background-color: #e15d05;
-     opacity: 0.2;
-    pointer-events: none;
-  }
-
-  .feedbacks__icon {
-    display: block;
-    fill: currentColor;
-    pointer-events: none;
-  }
-
+.feedbacks__icon {
+  display: block;
+  fill: currentColor;
+  pointer-events: none;
+}
 
 /* Breakpoints (тільки паддінги секції) */
 
-@media (min-width: 768px) {
-  .feedbacks {
-    padding: 64px 0 80px;
-  }
-}
-@media (min-width: 1440px) {
-  .feedbacks {
-    padding: 72px 0 96px;
-  }
-}
 
 .feedbacks__btn:focus-visible {
   outline: 2px solid #000;
