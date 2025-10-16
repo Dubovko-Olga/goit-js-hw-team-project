@@ -14,6 +14,7 @@
 .article-content {
   flex: 1 1 50%;
   width: 100%;
+  max-width: 343px;
   margin-bottom: 32px;
 }
 
@@ -24,6 +25,7 @@
 }
 .article-image{
    width: 100%;
+   max-width: 343px;
    height: 248px;
    
 }
@@ -36,6 +38,7 @@
   margin-bottom: 24px;
   flex-wrap: wrap;
   font-weight: bold;
+  height: 172px;
 }
 
 .article-text {
@@ -43,6 +46,7 @@
   font-weight: 400;
   line-height: 1.5;
   color: #0b0500;
+  height: 135px;
 }
 
 @media (min-width: 768px) {
@@ -57,7 +61,10 @@
   .article-image {
     height: 474px;
   }
-
+  .article-content{
+    width: 100%;
+     max-width: 704px;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -72,7 +79,7 @@
   .article-content{
     width: 50%;
     margin-right: 32px;
-    width: 640px;
+    maw-width: 640px;
     order: 1;
 
   }
@@ -86,7 +93,7 @@
   }
 
   .article-image {
-    width: 640px;
+   max-width: 640px;
     height: auto;
   }
 }
