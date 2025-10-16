@@ -59,6 +59,7 @@ body.no-scroll {
   display: flex;
   align-items: center;
   justify-content: center;
+   fill: #0b0500;
 }
 
 /* Titles */
