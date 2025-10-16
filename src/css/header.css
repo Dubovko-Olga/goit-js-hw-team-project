@@ -3,15 +3,15 @@
     padding: 14px 0;
   }
 
-.header{
- padding: 14px 0;
-}
+  .header {
+    padding: 14px 0;
+  }
 
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   .logo {
     font-size: 20px;
@@ -35,7 +35,7 @@
   .nav-link {
     text-decoration: none;
     color: #000;
-    font-weight: 500;
+    font-weight: 400;
   }
   .nav-link:hover {
     color: #5a2502;
