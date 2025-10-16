@@ -15,7 +15,7 @@
     border-radius: 4px;
     padding: 12px 24px;
     width: 100%;
-    max-width: 342px;
+    max-width: 343px;
     margin: 0 auto;
     display: block;
     height: 48px;
@@ -47,7 +47,7 @@
     border: 1px solid rgba(11, 5, 0, 0.15);
     border-radius: 4px;
     padding: 8px 12px;
-    width: 342px;
+    width: 343px;
     max-width: 100%;
     background-color: rgba(11, 5, 0, 0.05);
     font-family: 'Rubik', sans-serif;
@@ -133,6 +133,7 @@
 
   .gallery-item img {
     width: 100%;
+    max-width: 343px;
     height: 487px;
     object-fit: cover;
     display: block;
