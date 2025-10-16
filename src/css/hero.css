@@ -143,6 +143,7 @@
     padding-left: 40px;
     padding-bottom: 32px;
     width: 100%;
+    max-width: 704px;
     min-height: 274px;
     border: none;
   }
@@ -169,9 +170,11 @@
     gap: 24px;
   }
  .hero-title{
-  width: 704px;
+  max-width: 560px;
  }
- 
+ .hero-slide-image{
+  max-width: 704px;
+ }
 }
 @media only screen and (min-width: 1440px) {
   .hero-section {
@@ -181,8 +184,9 @@
   .hero-swiper-slide {
     padding-left: 56px;
     padding-bottom: 56px;
-    min-width: 100%;
-    min-height: 513px;
+    width: 100%;
+    max-width: 1312px;
+    height: 395px;
   }
   .hero-discount {
     font-size: 52px;
@@ -198,7 +202,10 @@
   .hero-title {
     font-size: 52px;
     margin-top: 24px;
-    width: 1168px;
+    max-width: 1168px;
     flex-wrap: nowrap;
+  }
+  .hero-slide-image{
+  max-width: 1312px;
   }
 }
