@@ -46,8 +46,8 @@ button:focus {
   border: 1px solid rgba(11, 5, 0, 0.15);
   border-radius: 4px;
   padding: 8px 12px;
-  width: 343px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 343px;
   background-color: rgba(11, 5, 0, 0.05);
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
@@ -90,6 +90,8 @@ option:checked {
 .select-wrapper {
   position: relative;
   display: inline-block;
+  width: 100%;
+  max-width: 343px;
 }
 
 .select-wrapper::before {
